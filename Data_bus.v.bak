@@ -1,0 +1,33 @@
+module Data_bus
+#(
+    parameter reg_count = 11,
+    parameter reg_width = 12,
+)
+(
+    input wire [(reg_count-1):0]  write_en,
+    input wire reset,
+    input wire [(reg_width-1):0] datain,
+    input wire mem_write,
+    input wire [2:0] alu_op,
+    output wire  [(reg_width-1):0] dataout
+);
+
+//reg [(reg_width-1):0] dataout
+
+always @(write_en,reset,mem_write,alu_op) 
+begin
+    if (reset) 
+        dataout <= 12'b000000000000;
+    else
+        dataout <= 12'b000100000000;    
+        
+    
+end
+
+
+
+
+
+
+    
+endmodule

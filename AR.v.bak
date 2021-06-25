@@ -1,0 +1,34 @@
+//need to check
+module AR
+#(
+    parameter reg_width=12
+   
+)
+
+(
+    input wire read_en, write_en,
+    input wire clk,reset,
+    input wire [(reg_width-1):0] datain, // datain from pc, bus processor 
+    output reg [(reg_width-1):0] dataout //dataout to memory ( IR and Data)
+     
+);
+
+reg [(reg_width-1):0] ir_reg ;
+reg [reg_width:0] trash;
+
+always @(posedge clk ) begin
+
+    if (read_en)
+        dataout = ir_reg;
+
+    else if (write_en)
+        ir_reg=datain;
+    
+    else if (reset)
+        ir_reg = 12'b000000000000;
+
+    else
+        ir_reg = trash; 
+            
+    
+end

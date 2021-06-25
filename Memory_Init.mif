@@ -1,0 +1,31 @@
+DEPTH = 4096;                               % Memory depth and width are required %
+                                          % DEPTH is the number of addresses %
+WIDTH = 12;                               % WIDTH is the number of bits of data per word %
+                                          % DEPTH and WIDTH should be entered as decimal numbers %
+ADDRESS_RADIX = DEC;                      % Address and value radixes are required %
+DATA_RADIX = DEC;                         % Enter BIN, DEC, HEX, OCT, or UNS; unless %
+                                          % otherwise specified, radixes = HEX %
+
+CONTENT
+BEGIN
+
+0:  2;   %row A %
+1:  2;   %column A or row B%
+2:  2;   % Column B%  
+3:200;   % alphap%
+4:900;   % beta p p%
+5:1600;   % gamma p %
+
+
+200: 6;  % start point of transposed matrix of a%        
+201: 67;
+202: 7;
+203: 9;
+
+900: 8;   % start point of matrix b%       
+901: 4;
+902: 2;
+903: 5;
+          
+ % gamma p 1700 %                     
+END; 

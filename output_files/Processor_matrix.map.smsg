@@ -1,0 +1,21 @@
+Warning (10273): Verilog HDL warning at Full_System_Copy.v(31): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Full_System_Copy.v Line: 31
+Warning (10273): Verilog HDL warning at Full_System.v(18): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Full_System.v Line: 18
+Warning (10273): Verilog HDL warning at Control_Unit.v(164): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 164
+Warning (10273): Verilog HDL warning at Control_Unit.v(165): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 165
+Warning (10273): Verilog HDL warning at Control_Unit.v(166): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 166
+Warning (10273): Verilog HDL warning at Control_Unit.v(168): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 168
+Warning (10273): Verilog HDL warning at Control_Unit.v(180): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 180
+Warning (10273): Verilog HDL warning at Control_Unit.v(181): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 181
+Warning (10273): Verilog HDL warning at Control_Unit.v(182): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 182
+Warning (10273): Verilog HDL warning at Control_Unit.v(184): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 184
+Warning (10273): Verilog HDL warning at Control_Unit.v(195): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 195
+Warning (10273): Verilog HDL warning at Control_Unit.v(196): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 196
+Warning (10273): Verilog HDL warning at Control_Unit.v(197): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 197
+Warning (10273): Verilog HDL warning at Control_Unit.v(199): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 199
+Info (10281): Verilog HDL Declaration information at Control_Unit.v(54): object "ADD" differs only in case from object "Add" in the same scope File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 54
+Info (10281): Verilog HDL Declaration information at Control_Unit.v(55): object "SUB" differs only in case from object "Sub" in the same scope File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 55
+Info (10281): Verilog HDL Declaration information at Control_Unit.v(53): object "MUL" differs only in case from object "Mul" in the same scope File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 53
+Info (10281): Verilog HDL Declaration information at Control_Unit.v(87): object "IDLE" differs only in case from object "Idle" in the same scope File: C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v Line: 87
+Warning (10273): Verilog HDL warning at IR.v(15): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/IR.v Line: 15
+Warning (10273): Verilog HDL warning at ALU.v(24): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/ALU.v Line: 24
+Warning (10273): Verilog HDL warning at ALU.v(31): extended using "x" or "z" File: C:/Users/sathiralanka/Desktop/Processor code/ALU.v Line: 31
