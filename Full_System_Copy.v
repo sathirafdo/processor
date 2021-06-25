@@ -40,8 +40,8 @@ AC_to_ALU;
 wire [reg_width-1:0] im_data_sig;
 wire im_wren_sig;
 wire [10:0] re,we;
-assign re = read_en[14:4];
-assign we = write_en[14:4];
+assign re = read_en[14:4]; //TODO remove these wires
+assign we = write_en[14:4]; //TODO remove these wires and rewire 
 
 MemoryQ	MemoryQ_inst (
             .address ( AR_to_mem ),
