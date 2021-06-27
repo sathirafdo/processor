@@ -1,5 +1,5 @@
 Flow report for Processor_matrix
-Sun Jun 27 09:58:48 2021
+Sun Jun 27 17:07:55 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Sun Jun 27 09:58:48 2021       ;
+; Flow Status                        ; Successful - Sun Jun 27 17:07:54 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Processor_matrix                            ;
 ; Top-level Entity Name              ; Full_System_Copy                            ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 861                                         ;
-;     Total combinational functions  ; 697                                         ;
-;     Dedicated logic registers      ; 441                                         ;
-; Total registers                    ; 441                                         ;
+; Total logic elements               ; 873                                         ;
+;     Total combinational functions  ; 709                                         ;
+;     Dedicated logic registers      ; 447                                         ;
+; Total registers                    ; 447                                         ;
 ; Total pins                         ; 163                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 52,224                                      ;
@@ -62,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/27/2021 09:56:26 ;
+; Start date & time ; 06/27/2021 17:06:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Processor_matrix    ;
 +-------------------+---------------------+
@@ -73,7 +73,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+----------------------------------------+------------------+------------------+--------------------+
 ; Assignment Name                      ; Value                                  ; Default Value    ; Entity Name      ; Section Id         ;
 +--------------------------------------+----------------------------------------+------------------+------------------+--------------------+
-; COMPILER_SIGNATURE_ID                ; 38917505025.162476798411940            ; --               ; --               ; --                 ;
+; COMPILER_SIGNATURE_ID                ; 38917505025.162479376101196            ; --               ; --               ; --                 ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --               ; ALU_tb             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --               ; Memory_AR_DR_CU_tb ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --               ; --               ; DR_tb              ;
@@ -142,8 +142,8 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:02:19     ; 1.0                     ; 4826 MB             ; 00:02:14                           ;
-; Total                ; 00:02:19     ; --                      ; --                  ; 00:02:14                           ;
+; Analysis & Synthesis ; 00:01:51     ; 1.0                     ; 4831 MB             ; 00:02:02                           ;
+; Total                ; 00:01:51     ; --                      ; --                  ; 00:02:02                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

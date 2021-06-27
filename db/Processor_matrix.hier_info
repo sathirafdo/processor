@@ -3298,7 +3298,7 @@ result[8] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[9] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[10] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[11] <= result.DB_MAX_OUTPUT_PORT_TYPE
-Zflag <= always0.DB_MAX_OUTPUT_PORT_TYPE
+Zflag <= Zflag$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Full_System_Copy|DR:DR_unit
@@ -3915,6 +3915,9 @@ reset => current_st.OUTPUTSELECT
 reset => current_st.OUTPUTSELECT
 reset => current_st.OUTPUTSELECT
 reset => current_st.OUTPUTSELECT
+reset => current_st.OUTPUTSELECT
+reset => current_st.OUTPUTSELECT
+reset => current_st.OUTPUTSELECT
 Zflag => next_st.DATAB
 Zflag => next_st.DATAB
 opcode[0] => Equal0.IN23
@@ -4313,9 +4316,9 @@ opcode[11] => Equal29.IN12
 opcode[11] => Equal30.IN12
 opcode[11] => Equal31.IN12
 opcode[11] => Equal32.IN12
-alu_op[0] <= WideOr47.DB_MAX_OUTPUT_PORT_TYPE
-alu_op[1] <= WideOr45.DB_MAX_OUTPUT_PORT_TYPE
-alu_op[2] <= WideOr43.DB_MAX_OUTPUT_PORT_TYPE
+alu_op[0] <= WideOr46.DB_MAX_OUTPUT_PORT_TYPE
+alu_op[1] <= WideOr44.DB_MAX_OUTPUT_PORT_TYPE
+alu_op[2] <= WideOr42.DB_MAX_OUTPUT_PORT_TYPE
 read_en[0] <= WideOr36.DB_MAX_OUTPUT_PORT_TYPE
 read_en[1] <= WideOr34.DB_MAX_OUTPUT_PORT_TYPE
 read_en[2] <= <GND>
@@ -4349,8 +4352,8 @@ write_en[13] <= write_en[13].DB_MAX_OUTPUT_PORT_TYPE
 write_en[14] <= write_en[14].DB_MAX_OUTPUT_PORT_TYPE
 write_en[15] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
 mem_write <= mem_write.DB_MAX_OUTPUT_PORT_TYPE
-PC_Inc <= WideOr49.DB_MAX_OUTPUT_PORT_TYPE
-mem_read[0] <= WideOr40.DB_MAX_OUTPUT_PORT_TYPE
+PC_Inc <= WideOr48.DB_MAX_OUTPUT_PORT_TYPE
+mem_read[0] <= mem_read.DB_MAX_OUTPUT_PORT_TYPE
 mem_read[1] <= WideOr38.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -30,12 +30,21 @@ assign result =(ALU_Operation == IDLE) ? 12'bx :
 					(ALU_Operation == Zero) ? 12'b000000000000 :
            			12'bx;
 
-always@(ALU_Operation ) 
+always@(result) 
 begin
-	if((ALU_Operation == Sub) && (result == 0))
+	if (ALU_Operation == Sub)
+	begin
+	if(result == 12'b000000000000)
+		begin
 		Zflag =  1'b1;
+		$display("inside a z flag zero operation result is zero");
+		end
 	else
+	begin
 		Zflag =  1'b0;
+		$display("inside z lfag result not zero");
+	end
+	end
 end
 					   
 //combiinational part ends here

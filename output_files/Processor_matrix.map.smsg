@@ -1,17 +1,17 @@
 Warning (10273): Verilog HDL warning at Full_System_Copy.v(31): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 31
 Warning (10273): Verilog HDL warning at Full_System.v(18): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System.v Line: 18
-Warning (10273): Verilog HDL warning at Control_Unit.v(166): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 166
-Warning (10273): Verilog HDL warning at Control_Unit.v(167): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 167
-Warning (10273): Verilog HDL warning at Control_Unit.v(168): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 168
+Warning (10273): Verilog HDL warning at Control_Unit.v(169): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 169
 Warning (10273): Verilog HDL warning at Control_Unit.v(170): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 170
-Warning (10273): Verilog HDL warning at Control_Unit.v(182): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 182
-Warning (10273): Verilog HDL warning at Control_Unit.v(183): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 183
-Warning (10273): Verilog HDL warning at Control_Unit.v(184): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 184
+Warning (10273): Verilog HDL warning at Control_Unit.v(171): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 171
+Warning (10273): Verilog HDL warning at Control_Unit.v(173): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 173
+Warning (10273): Verilog HDL warning at Control_Unit.v(185): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 185
 Warning (10273): Verilog HDL warning at Control_Unit.v(186): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 186
-Warning (10273): Verilog HDL warning at Control_Unit.v(197): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 197
-Warning (10273): Verilog HDL warning at Control_Unit.v(198): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 198
-Warning (10273): Verilog HDL warning at Control_Unit.v(199): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 199
+Warning (10273): Verilog HDL warning at Control_Unit.v(187): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 187
+Warning (10273): Verilog HDL warning at Control_Unit.v(189): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 189
+Warning (10273): Verilog HDL warning at Control_Unit.v(200): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 200
 Warning (10273): Verilog HDL warning at Control_Unit.v(201): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 201
+Warning (10273): Verilog HDL warning at Control_Unit.v(202): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 202
+Warning (10273): Verilog HDL warning at Control_Unit.v(204): extended using "x" or "z" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 204
 Info (10281): Verilog HDL Declaration information at Control_Unit.v(54): object "ADD" differs only in case from object "Add" in the same scope File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 54
 Info (10281): Verilog HDL Declaration information at Control_Unit.v(55): object "SUB" differs only in case from object "Sub" in the same scope File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 55
 Info (10281): Verilog HDL Declaration information at Control_Unit.v(53): object "MUL" differs only in case from object "Mul" in the same scope File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 53

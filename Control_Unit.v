@@ -143,7 +143,10 @@ localparam [5:0]
            FETCH4 = 6'd46,
            LOAD5 = 6'd47,
            JUMPZY3 = 6'd48,
-           JUMPZN2 = 6'd49;    
+           JUMPZN2 = 6'd49,
+           LOAD_REG4= 6'd50,
+           JUMP3 = 6'd51,
+           STORE3 = 6'd52 ;    
 
 
 reg [5:0] current_st, next_st;
@@ -431,8 +434,20 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             mem_write = 1'b0;
             alu_op = IDLE;
             PC_Inc = 1'b0;
-            next_st = FETCH1;
+            next_st = JUMP3;
         end
+
+        JUMP3 :
+        begin
+            $display("Jump3");
+            write_en = AR;
+            read_en = PC;            
+            mem_read = Null0; 
+            mem_write = 1'b0;
+            alu_op = IDLE;
+            PC_Inc = 1'b0;
+            next_st = FETCH1;
+        end     
         
         MVAC_total1 :
         begin
@@ -708,6 +723,18 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             mem_write = 1'b1;
             alu_op = IDLE;
             PC_Inc = 1'b0;
+            next_st = STORE3;
+        end
+
+        STORE3 :
+        begin
+            $display("Store3");
+            write_en = AR ;
+            read_en = PC ;            
+            mem_read = Null0; 
+            mem_write = 1'b1;
+            alu_op = IDLE;
+            PC_Inc = 1'b0;
             next_st = FETCH1;
         end
         
@@ -716,7 +743,7 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             $display("load reg 1");
             write_en = AR;
             read_en =AC ;            
-            mem_read = DataM; 
+            mem_read = Null0; 
             mem_write = 1'b0;
             alu_op = IDLE;
             PC_Inc = 1'b0;
@@ -725,7 +752,19 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
 
         LOAD_REG2 :
         begin
-            $display("LOAD_REG2");
+            $display("load reg 2");//update AR to get next adress from ins mem
+            write_en = AR;
+            read_en = PC ;            
+            mem_read = Null0; 
+            mem_write = 1'b0;
+            alu_op = IDLE;
+            PC_Inc = 1'b0;
+            next_st = LOAD_REG3;
+        end
+
+        LOAD_REG3 :
+        begin
+            $display("LOAD_REG3");
             write_en = DR; //eventhough DR is enabled here (write_en for DR controls input from the bus),
             //In here DR is controlled by DataM mem read signal (as it has higher priorty in DR implementation)
             //So data from memory is written to DR here
@@ -734,13 +773,12 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             mem_write = 1'b0;
             alu_op = IDLE;
             PC_Inc = 1'b0;
-            next_st = LOAD_REG3;
-        
+            next_st = LOAD_REG4;
         end
 
-        LOAD_REG3 :
+        LOAD_REG4 :
         begin
-            $display("LOAD_REG3");
+            $display("LOAD_REG4");
             write_en = AC;
             read_en = DR ;            
             mem_read = Null0; 
