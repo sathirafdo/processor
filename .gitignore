@@ -26,6 +26,18 @@
 # *.vhd
 # *.v
 
+# ignore Quartus II generated folders
+*/db/
+*/incremental_db/
+*/simulation/
+*/timing/
+*/testbench/
+*/*_sim/
+incremental_db/
+db/
+_output_files/
+PLLJ_PLLSPE_INFO.tx
+
 # ignore Quartus II generated files
 *_generation_script*
 *_inst.vhd
@@ -56,14 +68,3 @@
 *sopc_*
 # *.sdc # I want those timing files
 
-# ignore Quartus II generated folders
-*/db/
-*/incremental_db/
-*/simulation/
-*/timing/
-*/testbench/
-*/*_sim/
-incremental_db/
-db/
-_output_files/
-PLLJ_PLLSPE_INFO.tx
