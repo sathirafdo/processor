@@ -6,8 +6,8 @@ module ALU
 	input [reg_width-1:0] AC,Bus, // data from AC and Bus
 	// output reg [reg_width-1:0] result,// output to AC
 	// output reg Zflag
-	output wire [reg_width-1:0] result,
-	output reg Zflag
+	output [reg_width-1:0] result
+	// output reg Zflag //moving z flag to ac
 );
 
 localparam IDLE = 3'b000,
@@ -30,6 +30,8 @@ assign result =(ALU_Operation == IDLE) ? 12'bx :
 					(ALU_Operation == Zero) ? 12'b000000000000 :
            			12'bx;
 
+/*
+//moving z flag to ac
 always@(result) 
 begin
 	if (ALU_Operation == Sub)
@@ -40,13 +42,14 @@ begin
 		$display("inside a z flag zero operation result is zero");
 		end
 	else
-	begin
+		begin
 		Zflag =  1'b0;
 		$display("inside z lfag result not zero");
-	end
+		end
 	end
 end
-					   
+*/
+				   
 //combiinational part ends here
 
 //   always @( reset,ALU_Operation ) 

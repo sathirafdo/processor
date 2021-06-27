@@ -49,7 +49,7 @@ BEGIN
 37 : 24;          --MOV_row //MOV_r
 38 : 4;           --SUB
 39 : 7;           --JUMPZ
-40 : 48 ;         --check this
+40 : 49 ;         --check this
 41 : 20;          --MOV_alphap
 42 : 5;           --INC
 43 : 9;           --MVAC_alphap
@@ -57,7 +57,7 @@ BEGIN
 45 : 5;           --INC
 46 : 10;          --MVAC_betap
 47 :  6;           --JUMP PC
-48 :  23;
+48 : 23;
 49 : 19;          --MOV_TOTAL
 50 : 30;         --STORE
 51 : 22;           --MOV_gammap
@@ -73,12 +73,12 @@ BEGIN
 61 :   4;          --SUB
 62 :  7;          --JUMPZ PC
 63 :  77;
-64 :  20;          --MOVa lphap
+64 :  20;          --MOV_alphap
 65 :   5;          --INC
 66 :   9;          --MVAC_aphap
 67 :  24;        --MOV_row
 68 :  12;         --MVAC_R
-69 :  21;         --MOV  b etap
+69 :  21;         --MOV  betap
 70 :   4;         --SUB
 71 :   5;         --INC
 72 :  10;           --MVAC _betap
@@ -86,23 +86,26 @@ BEGIN
 74 :  16;         --MVAC_rnow
 75 :   6;           --JUMP PC
 76 :  23;
-77 :  29;          --MOV_cBnow
-78 :   5;           --INC
-79 :  18;          --MVAC_cBnow
-80 :  12;          --MVAC_R
-81 :  26;          --MOV_cB
-82 :   4;           --SUB
-83 :   7;           --JUMPZ PC
-84 :  93;
-85 :   1;           --LOAD
-86 :   3;         --( A matrix first address)
-87 :   9;           --MVAC_alphap
-88 :  21;          --MOV_betap
-89 :   5;           --INC
-90 :  10;          --MVAC_betap
-91 :   6;           --JUMP PC
-92 :  23;
-93 :  32;          --ENDOP
+77  : 0;         --CLR
+78 : 16;         --MVAC_rnow
+79 :17;         --MVAC_cAtnow
+80 : 29;          --MOV_cBnow
+81  : 5;           --INC
+82 : 18;          --MVAC_cBnow
+83 :12;          --MVAC_R
+84 :26;          --MOV_cB
+85  :4;           --SUB
+86  :7;           --JUMPZ PC
+87 : 96;
+88 :1;           --LOAD
+89  :3;         --( A matrix first address)
+90 :9;           --MVAC_alphap
+91  :21;          --MOV_betap
+92  :5;           --INC
+93 :10;          --MVAC_betap
+94  : 6;           --JUMP PC
+95  :23;
+96  : 32;          --ENDOP
 
 
 END; 

@@ -5,7 +5,7 @@ module AC
     input wire [(reg_width-1):0] AC_in, // ALU output
     output reg [reg_width-1:0] ALU, //ALU input
     output reg [reg_width-1:0] bus_out, // to the bus
-    // output reg Zflag
+    output reg Zflag //moving z flag to ac
 );
 
 always @(posedge clk) 
@@ -16,7 +16,7 @@ begin
    
             ALU = 12'b000000000000;
             bus_out = 12'b000000000000;
-            Zflag =1'b0;
+            Zflag =1'b0;        //moving z flag to ac
         end
         
     else if (write_en)
@@ -24,11 +24,12 @@ begin
         ALU = AC_in;
 		bus_out = AC_in;
 
+//moving z flag to ac
 //added newly to get proper z value
-        // if (AC_in == 12'b000000000000)
-        //    Zflag = 1'b1;
-        // else
-        //    Zflag = 1'b0;
+        if (AC_in == 12'b000000000000)
+           Zflag = 1'b1;
+        else
+           Zflag = 1'b0;
 
     end
     

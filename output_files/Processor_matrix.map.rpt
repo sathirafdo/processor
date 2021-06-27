@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Processor_matrix
-Sun Jun 27 17:07:54 2021
+Sun Jun 27 22:55:19 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -17,33 +17,32 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   9. Analysis & Synthesis DSP Block Usage Summary
  10. Analysis & Synthesis IP Cores Summary
  11. State Machine - |Full_System_Copy|Control_Unit:CU|current_st
- 12. User-Specified and Inferred Latches
- 13. Registers Removed During Synthesis
- 14. General Register Statistics
- 15. Inverted Register Statistics
- 16. Multiplexer Restructuring Statistics (Restructuring Performed)
- 17. Source assignments for MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|altsyncram_e3d2:altsyncram1
- 18. Source assignments for Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|altsyncram_lad2:altsyncram1
- 19. Parameter Settings for User Entity Instance: Top-level Entity: |Full_System_Copy
- 20. Parameter Settings for User Entity Instance: MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component
- 21. Parameter Settings for User Entity Instance: Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: Register_File:RF_unit
- 23. Parameter Settings for User Entity Instance: ALU:ALU_unit
- 24. Parameter Settings for User Entity Instance: DR:DR_unit
- 25. Parameter Settings for User Entity Instance: PC:PC_unit
- 26. Parameter Settings for User Entity Instance: AC:AC_unit
- 27. Parameter Settings for User Entity Instance: AR:AR_unit
- 28. Parameter Settings for User Entity Instance: IR:IR_unit
- 29. Parameter Settings for User Entity Instance: Data_bus:DB_unit
- 30. Parameter Settings for User Entity Instance: Control_Unit:CU
- 31. Parameter Settings for Inferred Entity Instance: ALU:ALU_unit|lpm_mult:Mult0
- 32. altsyncram Parameter Settings by Entity Instance
- 33. lpm_mult Parameter Settings by Entity Instance
- 34. In-System Memory Content Editor Settings
- 35. Post-Synthesis Netlist Statistics for Top Partition
- 36. Elapsed Time Per Partition
- 37. Analysis & Synthesis Messages
- 38. Analysis & Synthesis Suppressed Messages
+ 12. Registers Removed During Synthesis
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|altsyncram_e3d2:altsyncram1
+ 17. Source assignments for Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|altsyncram_lad2:altsyncram1
+ 18. Parameter Settings for User Entity Instance: Top-level Entity: |Full_System_Copy
+ 19. Parameter Settings for User Entity Instance: MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component
+ 20. Parameter Settings for User Entity Instance: Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component
+ 21. Parameter Settings for User Entity Instance: Register_File:RF_unit
+ 22. Parameter Settings for User Entity Instance: ALU:ALU_unit
+ 23. Parameter Settings for User Entity Instance: DR:DR_unit
+ 24. Parameter Settings for User Entity Instance: PC:PC_unit
+ 25. Parameter Settings for User Entity Instance: AC:AC_unit
+ 26. Parameter Settings for User Entity Instance: AR:AR_unit
+ 27. Parameter Settings for User Entity Instance: IR:IR_unit
+ 28. Parameter Settings for User Entity Instance: Data_bus:DB_unit
+ 29. Parameter Settings for User Entity Instance: Control_Unit:CU
+ 30. Parameter Settings for Inferred Entity Instance: ALU:ALU_unit|lpm_mult:Mult0
+ 31. altsyncram Parameter Settings by Entity Instance
+ 32. lpm_mult Parameter Settings by Entity Instance
+ 33. In-System Memory Content Editor Settings
+ 34. Post-Synthesis Netlist Statistics for Top Partition
+ 35. Elapsed Time Per Partition
+ 36. Analysis & Synthesis Messages
+ 37. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -69,15 +68,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Jun 27 17:07:54 2021       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jun 27 22:55:18 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Processor_matrix                            ;
 ; Top-level Entity Name              ; Full_System_Copy                            ;
 ; Family                             ; Cyclone IV E                                ;
 ; Total logic elements               ; 873                                         ;
 ;     Total combinational functions  ; 709                                         ;
-;     Dedicated logic registers      ; 447                                         ;
-; Total registers                    ; 447                                         ;
+;     Dedicated logic registers      ; 448                                         ;
+; Total registers                    ; 448                                         ;
 ; Total pins                         ; 163                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 52,224                                      ;
@@ -250,16 +249,16 @@ refer to the applicable agreement for further details.
 ;                                             ;           ;
 ; Total combinational functions               ; 709       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 394       ;
-;     -- 3 input functions                    ; 177       ;
-;     -- <=2 input functions                  ; 138       ;
+;     -- 4 input functions                    ; 398       ;
+;     -- 3 input functions                    ; 164       ;
+;     -- <=2 input functions                  ; 147       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
 ;     -- normal mode                          ; 652       ;
 ;     -- arithmetic mode                      ; 57        ;
 ;                                             ;           ;
-; Total registers                             ; 447       ;
-;     -- Dedicated logic registers            ; 447       ;
+; Total registers                             ; 448       ;
+;     -- Dedicated logic registers            ; 448       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 163       ;
@@ -268,9 +267,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 2         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 269       ;
-; Total fan-out                               ; 4791      ;
-; Average fan-out                             ; 3.16      ;
+; Maximum fan-out                             ; 270       ;
+; Total fan-out                               ; 4789      ;
+; Average fan-out                             ; 3.15      ;
 +---------------------------------------------+-----------+
 
 
@@ -279,9 +278,9 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                          ; Entity Name                       ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------------+--------------+
-; |Full_System_Copy                                                                                                                       ; 709 (1)             ; 447 (0)                   ; 52224       ; 2            ; 0       ; 1         ; 163  ; 0            ; |Full_System_Copy                                                                                                                                                                                                                                                                                                                                            ; Full_System_Copy                  ; work         ;
-;    |AC:AC_unit|                                                                                                                         ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|AC:AC_unit                                                                                                                                                                                                                                                                                                                                 ; AC                                ; work         ;
-;    |ALU:ALU_unit|                                                                                                                       ; 59 (59)             ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Full_System_Copy|ALU:ALU_unit                                                                                                                                                                                                                                                                                                                               ; ALU                               ; work         ;
+; |Full_System_Copy                                                                                                                       ; 709 (1)             ; 448 (0)                   ; 52224       ; 2            ; 0       ; 1         ; 163  ; 0            ; |Full_System_Copy                                                                                                                                                                                                                                                                                                                                            ; Full_System_Copy                  ; work         ;
+;    |AC:AC_unit|                                                                                                                         ; 18 (18)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|AC:AC_unit                                                                                                                                                                                                                                                                                                                                 ; AC                                ; work         ;
+;    |ALU:ALU_unit|                                                                                                                       ; 56 (56)             ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Full_System_Copy|ALU:ALU_unit                                                                                                                                                                                                                                                                                                                               ; ALU                               ; work         ;
 ;       |lpm_mult:Mult0|                                                                                                                  ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Full_System_Copy|ALU:ALU_unit|lpm_mult:Mult0                                                                                                                                                                                                                                                                                                                ; lpm_mult                          ; work         ;
 ;          |mult_vct:auto_generated|                                                                                                      ; 0 (0)               ; 0 (0)                     ; 0           ; 2            ; 0       ; 1         ; 0    ; 0            ; |Full_System_Copy|ALU:ALU_unit|lpm_mult:Mult0|mult_vct:auto_generated                                                                                                                                                                                                                                                                                        ; mult_vct                          ; work         ;
 ;    |AR:AR_unit|                                                                                                                         ; 13 (13)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|AR:AR_unit                                                                                                                                                                                                                                                                                                                                 ; AR                                ; work         ;
@@ -289,11 +288,11 @@ refer to the applicable agreement for further details.
 ;    |DR:DR_unit|                                                                                                                         ; 25 (25)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|DR:DR_unit                                                                                                                                                                                                                                                                                                                                 ; DR                                ; work         ;
 ;    |Data_bus:DB_unit|                                                                                                                   ; 37 (37)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Data_bus:DB_unit                                                                                                                                                                                                                                                                                                                           ; Data_bus                          ; work         ;
 ;    |IR:IR_unit|                                                                                                                         ; 1 (1)               ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|IR:IR_unit                                                                                                                                                                                                                                                                                                                                 ; IR                                ; work         ;
-;    |Ins_Memory:Ins_Memory_inst|                                                                                                         ; 67 (0)              ; 42 (0)                    ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst                                                                                                                                                                                                                                                                                                                 ; Ins_Memory                        ; work         ;
-;       |altsyncram:altsyncram_component|                                                                                                 ; 67 (0)              ; 42 (0)                    ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
-;          |altsyncram_j3n1:auto_generated|                                                                                               ; 67 (0)              ; 42 (0)                    ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated                                                                                                                                                                                                                                                  ; altsyncram_j3n1                   ; work         ;
+;    |Ins_Memory:Ins_Memory_inst|                                                                                                         ; 66 (0)              ; 42 (0)                    ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst                                                                                                                                                                                                                                                                                                                 ; Ins_Memory                        ; work         ;
+;       |altsyncram:altsyncram_component|                                                                                                 ; 66 (0)              ; 42 (0)                    ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                 ; altsyncram                        ; work         ;
+;          |altsyncram_j3n1:auto_generated|                                                                                               ; 66 (0)              ; 42 (0)                    ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated                                                                                                                                                                                                                                                  ; altsyncram_j3n1                   ; work         ;
 ;             |altsyncram_lad2:altsyncram1|                                                                                               ; 0 (0)               ; 0 (0)                     ; 3072        ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|altsyncram_lad2:altsyncram1                                                                                                                                                                                                                      ; altsyncram_lad2                   ; work         ;
-;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 67 (44)             ; 42 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                        ; sld_mod_ram_rom                   ; work         ;
+;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 66 (43)             ; 42 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                        ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 23 (23)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                     ; sld_rom_sr                        ; work         ;
 ;    |MemoryQ:MemoryQ_inst|                                                                                                               ; 70 (0)              ; 46 (0)                    ; 49152       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|MemoryQ:MemoryQ_inst                                                                                                                                                                                                                                                                                                                       ; MemoryQ                           ; work         ;
 ;       |altsyncram:altsyncram_component|                                                                                                 ; 70 (0)              ; 46 (0)                    ; 49152       ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component                                                                                                                                                                                                                                                                                       ; altsyncram                        ; work         ;
@@ -302,7 +301,7 @@ refer to the applicable agreement for further details.
 ;             |sld_mod_ram_rom:mgl_prim2|                                                                                                 ; 70 (47)             ; 46 (37)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2                                                                                                                                                                                                                              ; sld_mod_ram_rom                   ; work         ;
 ;                |sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|                                                                     ; 23 (23)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr                                                                                                                                                                           ; sld_rom_sr                        ; work         ;
 ;    |PC:PC_unit|                                                                                                                         ; 25 (25)             ; 12 (12)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|PC:PC_unit                                                                                                                                                                                                                                                                                                                                 ; PC                                ; work         ;
-;    |Register_File:RF_unit|                                                                                                              ; 112 (112)           ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Register_File:RF_unit                                                                                                                                                                                                                                                                                                                      ; Register_File                     ; work         ;
+;    |Register_File:RF_unit|                                                                                                              ; 111 (111)           ; 132 (132)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|Register_File:RF_unit                                                                                                                                                                                                                                                                                                                      ; Register_File                     ; work         ;
 ;    |sld_hub:auto_hub|                                                                                                                   ; 173 (1)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                           ; sld_hub                           ; altera_sld   ;
 ;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 172 (0)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                           ; alt_sld_fab_with_jtag_input       ; altera_sld   ;
 ;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 172 (0)             ; 114 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Full_System_Copy|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                        ; alt_sld_fab                       ; alt_sld_fab  ;
@@ -420,17 +419,6 @@ Encoding Type:  One-Hot
 +-------------------------+-------------------+------------------+----------------------+--------------------+--------------------+------------------+-------------------+------------------+------------------+-------------------+--------------------+--------------------+--------------------+----------------------+----------------------+----------------------+-------------------+-------------------+-----------------------+------------------------+----------------------+--------------------+---------------------+---------------------+-------------------+------------------------+-----------------------+------------------------+-----------------------+------------------------+-------------------------+-----------------------+---------------------+----------------------+----------------------+--------------------+-------------------------+------------------------+-------------------------+------------------------+------------------+------------------+-----------------+-----------------+-----------------+-----------------+------------------+------------------+-----------------+-------------------+-------------------+-------------------+-----------------+
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; ALU:ALU_unit|Zflag                                 ; ALU:ALU_unit|Equal0 ; yes                    ;
-; Number of user-specified and inferred latches = 1  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
-Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
-
-
 +-------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                      ;
 +----------------------------------------+--------------------------------+
@@ -463,8 +451,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 447   ;
-; Number of registers using Synchronous Clear  ; 47    ;
+; Total registers                              ; 448   ;
+; Number of registers using Synchronous Clear  ; 48    ;
 ; Number of registers using Synchronous Load   ; 36    ;
 ; Number of registers using Asynchronous Clear ; 107   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -489,36 +477,36 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                                               ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|IR:IR_unit|dataout[9]                                                                                                                                                                  ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[0][9]                                                                                                                                                    ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[1][5]                                                                                                                                                    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|IR:IR_unit|dataout[0]                                                                                                                                                                  ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[0][6]                                                                                                                                                    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[1][1]                                                                                                                                                    ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[2][4]                                                                                                                                                    ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[3][7]                                                                                                                                                    ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[4][10]                                                                                                                                                   ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[5][4]                                                                                                                                                    ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[6][0]                                                                                                                                                    ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[7][3]                                                                                                                                                    ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[8][2]                                                                                                                                                    ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[9][9]                                                                                                                                                    ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[10][1]                                                                                                                                                   ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[3][2]                                                                                                                                                    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[4][8]                                                                                                                                                    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[5][9]                                                                                                                                                    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[6][7]                                                                                                                                                    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[7][6]                                                                                                                                                    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[8][11]                                                                                                                                                   ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[9][5]                                                                                                                                                    ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Register_File:RF_unit|reg_set[10][4]                                                                                                                                                   ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[2]                                           ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[10]                                                     ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[4]                                                      ;
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_shift_cntr_reg[0]                                     ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[5]                                                ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[7]                                                ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[8]                                                      ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |Full_System_Copy|PC:PC_unit|AR_data_out[11]                                                                                                                                                             ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |Full_System_Copy|AR:AR_unit|dataout[5]                                                                                                                                                                  ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[4]       ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_data_reg[7]                                                ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[0]                                                ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|ram_rom_addr_reg[5]                                                      ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |Full_System_Copy|PC:PC_unit|AR_data_out[4]                                                                                                                                                              ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |Full_System_Copy|AR:AR_unit|dataout[10]                                                                                                                                                                 ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[3]       ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|word_counter[0] ;
-; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|DR:DR_unit|dataout[6]                                                                                                                                                                  ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]            ;
-; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[0]      ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|AC:AC_unit|ALU[0]                                                                                                                                                                      ;
+; 5:1                ; 12 bits   ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|DR:DR_unit|dataout[4]                                                                                                                                                                  ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |Full_System_Copy|MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[1]            ;
+; 26:1               ; 4 bits    ; 68 LEs        ; 48 LEs               ; 20 LEs                 ; Yes        ; |Full_System_Copy|Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2|sld_rom_sr:\ram_rom_logic_gen:name_gen:info_rom_sr|WORD_SR[2]      ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Full_System_Copy|AC:AC_unit|ALU[10]                                                                                                                                                                     ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Full_System_Copy|Control_Unit:CU|current_st                                                                                                                                                             ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Full_System_Copy|ALU:ALU_unit|Add0                                                                                                                                                                      ;
-; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Full_System_Copy|Data_bus:DB_unit|dataout[2]                                                                                                                                                            ;
-; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |Full_System_Copy|ALU:ALU_unit|result[3]                                                                                                                                                                 ;
+; 4:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Full_System_Copy|Data_bus:DB_unit|dataout[3]                                                                                                                                                            ;
+; 8:1                ; 12 bits   ; 60 LEs        ; 36 LEs               ; 24 LEs                 ; No         ; |Full_System_Copy|ALU:ALU_unit|result[0]                                                                                                                                                                 ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |Full_System_Copy|Control_Unit:CU|current_st                                                                                                                                                             ;
 ; 12:1               ; 12 bits   ; 96 LEs        ; 84 LEs               ; 12 LEs                 ; No         ; |Full_System_Copy|Register_File:RF_unit|dataout[0]                                                                                                                                                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -875,13 +863,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 217                         ;
-; cycloneiii_ff         ; 333                         ;
+; cycloneiii_ff         ; 334                         ;
 ;     CLR               ; 12                          ;
 ;     ENA               ; 200                         ;
 ;     ENA CLR           ; 14                          ;
 ;     ENA CLR SLD       ; 20                          ;
 ;     ENA SCLR          ; 34                          ;
-;     SCLR              ; 1                           ;
+;     SCLR              ; 2                           ;
 ;     plain             ; 52                          ;
 ; cycloneiii_lcell_comb ; 545                         ;
 ;     arith             ; 49                          ;
@@ -890,15 +878,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     normal            ; 496                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 54                          ;
-;         3 data inputs ; 97                          ;
-;         4 data inputs ; 330                         ;
+;         2 data inputs ; 63                          ;
+;         3 data inputs ; 84                          ;
+;         4 data inputs ; 334                         ;
 ; cycloneiii_mac_mult   ; 1                           ;
 ; cycloneiii_mac_out    ; 1                           ;
 ; cycloneiii_ram_block  ; 24                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.10                       ;
-; Average LUT depth     ; 5.94                        ;
+; Max LUT depth         ; 11.40                       ;
+; Average LUT depth     ; 5.67                        ;
 +-----------------------+-----------------------------+
 
 
@@ -907,7 +895,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:09     ;
 +----------------+--------------+
 
 
@@ -917,7 +905,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Jun 27 17:05:59 2021
+    Info: Processing started: Sun Jun 27 22:52:22 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Processor_matrix -c Processor_matrix
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -974,10 +962,10 @@ Info (12128): Elaborating entity "altsyncram_6pm1" for hierarchy "MemoryQ:Memory
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_e3d2.tdf
     Info (12023): Found entity 1: altsyncram_e3d2 File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_e3d2.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_e3d2" for hierarchy "MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|altsyncram_e3d2:altsyncram1" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_6pm1.tdf Line: 36
-Warning (113028): 4082 out of 4096 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_Init.mif Line: 1
+Warning (113028): 4076 out of 4096 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 3 warnings found, and 3 warnings are reported. File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_Init.mif Line: 1
     Warning (113027): Addresses ranging from 6 to 199 are not initialized File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_Init.mif Line: 1
-    Warning (113027): Addresses ranging from 204 to 899 are not initialized File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_Init.mif Line: 1
-    Warning (113027): Addresses ranging from 904 to 4095 are not initialized File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_Init.mif Line: 1
+    Warning (113027): Addresses ranging from 208 to 899 are not initialized File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_Init.mif Line: 1
+    Warning (113027): Addresses ranging from 906 to 4095 are not initialized File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_Init.mif Line: 1
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_6pm1.tdf Line: 37
 Info (12130): Elaborated megafunction instantiation "MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_6pm1.tdf Line: 37
 Info (12133): Instantiated megafunction "MemoryQ:MemoryQ_inst|altsyncram:altsyncram_component|altsyncram_6pm1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_6pm1.tdf Line: 37
@@ -1018,8 +1006,8 @@ Info (12128): Elaborating entity "altsyncram_j3n1" for hierarchy "Ins_Memory:Ins
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_lad2.tdf
     Info (12023): Found entity 1: altsyncram_lad2 File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_lad2.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_lad2" for hierarchy "Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|altsyncram_lad2:altsyncram1" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_j3n1.tdf Line: 36
-Warning (113028): 162 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory_Init.mif Line: 1
-    Warning (113027): Addresses ranging from 94 to 255 are not initialized File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory_Init.mif Line: 1
+Warning (113028): 159 out of 256 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory_Init.mif Line: 1
+    Warning (113027): Addresses ranging from 97 to 255 are not initialized File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory_Init.mif Line: 1
 Info (12128): Elaborating entity "sld_mod_ram_rom" for hierarchy "Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_j3n1.tdf Line: 37
 Info (12130): Elaborated megafunction instantiation "Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_j3n1.tdf Line: 37
 Info (12133): Instantiated megafunction "Ins_Memory:Ins_Memory_inst|altsyncram:altsyncram_component|altsyncram_j3n1:auto_generated|sld_mod_ram_rom:mgl_prim2" with the following parameter: File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/altsyncram_j3n1.tdf Line: 37
@@ -1032,12 +1020,9 @@ Info (12133): Instantiated megafunction "Ins_Memory:Ins_Memory_inst|altsyncram:a
     Info (12134): Parameter "WIDTH_WORD" = "12"
     Info (12134): Parameter "WIDTHAD" = "8"
 Info (12128): Elaborating entity "Register_File" for hierarchy "Register_File:RF_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 67
-Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 76
-Warning (10235): Verilog HDL Always Construct warning at ALU.v(35): variable "ALU_Operation" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v Line: 35
-Warning (10240): Verilog HDL Always Construct warning at ALU.v(33): inferring latch(es) for variable "Zflag", which holds its previous value in one or more paths through the always construct File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v Line: 33
-Info (10041): Inferred latch for "Zflag" at ALU.v(35) File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v Line: 35
-Info (12128): Elaborating entity "DR" for hierarchy "DR:DR_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 88
-Info (12128): Elaborating entity "PC" for hierarchy "PC:PC_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 96
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 75
+Info (12128): Elaborating entity "DR" for hierarchy "DR:DR_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 87
+Info (12128): Elaborating entity "PC" for hierarchy "PC:PC_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 95
 Info (12128): Elaborating entity "AC" for hierarchy "AC:AC_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 104
 Info (12128): Elaborating entity "AR" for hierarchy "AR:AR_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 114
 Info (12128): Elaborating entity "IR" for hierarchy "IR:IR_unit" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 122
@@ -1047,7 +1032,7 @@ Warning (10235): Verilog HDL Always Construct warning at Data_bus.v(44): variabl
 Warning (10235): Verilog HDL Always Construct warning at Data_bus.v(46): variable "Register_file" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Data_bus.v Line: 46
 Info (12128): Elaborating entity "Control_Unit" for hierarchy "Control_Unit:CU" File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 147
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2021.06.27.17:06:57 Progress: Loading sldfd5c93b1/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2021.06.27.22:53:44 Progress: Loading sldfd5c93b1/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -1085,8 +1070,6 @@ Info (12133): Instantiated megafunction "ALU:ALU_unit|lpm_mult:Mult0" with the f
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_vct.tdf
     Info (12023): Found entity 1: mult_vct File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/db/mult_vct.tdf Line: 28
-Warning (13012): Latch ALU:ALU_unit|Zflag has unsafe behavior File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v Line: 11
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Control_Unit:CU|WideOr42 File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v Line: 177
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "read_en[2]" is stuck at GND File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 19
     Warning (13410): Pin "read_en[3]" is stuck at GND File: C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v Line: 19
@@ -1101,11 +1084,11 @@ Info (21057): Implemented 1083 device resources after synthesis - the final reso
     Info (21061): Implemented 889 logic cells
     Info (21064): Implemented 24 RAM segments
     Info (21062): Implemented 2 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 18 warnings
-    Info: Peak virtual memory: 4831 megabytes
-    Info: Processing ended: Sun Jun 27 17:07:55 2021
-    Info: Elapsed time: 00:01:56
-    Info: Total CPU time (on all processors): 00:02:05
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 14 warnings
+    Info: Peak virtual memory: 4828 megabytes
+    Info: Processing ended: Sun Jun 27 22:55:19 2021
+    Info: Elapsed time: 00:02:57
+    Info: Total CPU time (on all processors): 00:02:18
 
 
 +------------------------------------------+

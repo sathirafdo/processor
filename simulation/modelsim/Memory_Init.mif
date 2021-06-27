@@ -9,9 +9,9 @@ DATA_RADIX = DEC;                         % Enter BIN, DEC, HEX, OCT, or UNS; un
 CONTENT
 BEGIN
 
-0:  2;   %row A %
+0:  4;   %row A / column AT% 
 1:  2;   %column A or row B%
-2:  2;   % Column B%  
+2:  3;   % Column B%  
 3:200;   % alphap%
 4:900;   % beta p p%
 5:1600;   % gamma p %
@@ -21,11 +21,17 @@ BEGIN
 201: 67;
 202: 7;
 203: 9;
+204: 34;
+205: 54;
+206: 89;
+207: 30;
 
 900: 8;   % start point of matrix b%       
 901: 4;
 902: 2;
 903: 5;
+904: 3;
+905: 6;
           
- % gamma p 1700 %                     
+ % gamma p 1600 %                     
 END; 

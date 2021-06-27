@@ -3298,7 +3298,6 @@ result[8] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[9] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[10] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[11] <= result.DB_MAX_OUTPUT_PORT_TYPE
-Zflag <= Zflag$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Full_System_Copy|DR:DR_unit
@@ -3488,6 +3487,7 @@ AR_data_out[11] <= AR_data_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Full_System_Copy|AC:AC_unit
+clk => Zflag~reg0.CLK
 clk => bus_out[0]~reg0.CLK
 clk => bus_out[1]~reg0.CLK
 clk => bus_out[2]~reg0.CLK
@@ -3536,6 +3536,7 @@ reset => bus_out.OUTPUTSELECT
 reset => bus_out.OUTPUTSELECT
 reset => bus_out.OUTPUTSELECT
 reset => bus_out.OUTPUTSELECT
+reset => Zflag.OUTPUTSELECT
 write_en => ALU.OUTPUTSELECT
 write_en => ALU.OUTPUTSELECT
 write_en => ALU.OUTPUTSELECT
@@ -3560,30 +3561,43 @@ write_en => bus_out.OUTPUTSELECT
 write_en => bus_out.OUTPUTSELECT
 write_en => bus_out.OUTPUTSELECT
 write_en => bus_out.OUTPUTSELECT
+write_en => Zflag.OUTPUTSELECT
 AC_in[0] => ALU.DATAB
 AC_in[0] => bus_out.DATAB
+AC_in[0] => Equal0.IN11
 AC_in[1] => ALU.DATAB
 AC_in[1] => bus_out.DATAB
+AC_in[1] => Equal0.IN10
 AC_in[2] => ALU.DATAB
 AC_in[2] => bus_out.DATAB
+AC_in[2] => Equal0.IN9
 AC_in[3] => ALU.DATAB
 AC_in[3] => bus_out.DATAB
+AC_in[3] => Equal0.IN8
 AC_in[4] => ALU.DATAB
 AC_in[4] => bus_out.DATAB
+AC_in[4] => Equal0.IN7
 AC_in[5] => ALU.DATAB
 AC_in[5] => bus_out.DATAB
+AC_in[5] => Equal0.IN6
 AC_in[6] => ALU.DATAB
 AC_in[6] => bus_out.DATAB
+AC_in[6] => Equal0.IN5
 AC_in[7] => ALU.DATAB
 AC_in[7] => bus_out.DATAB
+AC_in[7] => Equal0.IN4
 AC_in[8] => ALU.DATAB
 AC_in[8] => bus_out.DATAB
+AC_in[8] => Equal0.IN3
 AC_in[9] => ALU.DATAB
 AC_in[9] => bus_out.DATAB
+AC_in[9] => Equal0.IN2
 AC_in[10] => ALU.DATAB
 AC_in[10] => bus_out.DATAB
+AC_in[10] => Equal0.IN1
 AC_in[11] => ALU.DATAB
 AC_in[11] => bus_out.DATAB
+AC_in[11] => Equal0.IN0
 ALU[0] <= ALU[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ALU[1] <= ALU[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 ALU[2] <= ALU[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
@@ -3608,6 +3622,7 @@ bus_out[8] <= bus_out[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bus_out[9] <= bus_out[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bus_out[10] <= bus_out[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 bus_out[11] <= bus_out[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+Zflag <= Zflag~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Full_System_Copy|AR:AR_unit

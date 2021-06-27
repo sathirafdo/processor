@@ -72,8 +72,7 @@ ALU #(.reg_width(reg_width)) ALU_unit
             .ALU_Operation(alu_op),
             .AC(AC_to_ALU),
             .Bus(bus_dataout),
-            .result(ALU_result),
-            .Zflag(Zflag));
+            .result(ALU_result)); //moving z flag to ac
 
 
 DR #(.reg_width(reg_width)) DR_unit 
@@ -101,7 +100,8 @@ AC #(.reg_width(reg_width)) AC_unit
             .clk(clk),
             .reset(reset),
             .ALU(AC_to_ALU),
-            .bus_out(AC_out));
+            .bus_out(AC_out),
+            .Zflag(Zflag)); //moving z flag to ac
 
 
 AR #(.reg_width(reg_width)) AR_unit 
