@@ -30,7 +30,7 @@
 */db/
 */incremental_db/
 */simulation/
-*/simulation/modelsim/*
+*/rtl_work/
 */timing/
 */testbench/
 */*_sim/
