@@ -30,6 +30,7 @@
 */db/
 */incremental_db/
 */simulation/
+*/simulation/modelsim/
 */timing/
 */testbench/
 */*_sim/
