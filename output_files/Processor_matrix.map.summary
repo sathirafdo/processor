@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Sat Jun 26 02:46:44 2021
-Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Sun Jun 27 09:58:48 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Processor_matrix
 Top-level Entity Name : Full_System_Copy
 Family : Cyclone IV E
-Total logic elements : 853
-    Total combinational functions : 691
-    Dedicated logic registers : 438
-Total registers : 438
+Total logic elements : 861
+    Total combinational functions : 697
+    Dedicated logic registers : 441
+Total registers : 441
 Total pins : 163
 Total virtual pins : 0
 Total memory bits : 52,224

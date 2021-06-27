@@ -7,7 +7,7 @@ module ALU
 	// output reg [reg_width-1:0] result,// output to AC
 	// output reg Zflag
 	output wire [reg_width-1:0] result,
-	output wire Zflag
+	output reg Zflag
 );
 
 localparam IDLE = 3'b000,
@@ -29,7 +29,14 @@ assign result =(ALU_Operation == IDLE) ? 12'bx :
 					(ALU_Operation == Plus1) ? AC+12'b000000000001 :
 					(ALU_Operation == Zero) ? 12'b000000000000 :
            			12'bx;
-assign Zflag = (result == 0) ? 1'b1 : 1'b0 ;
+
+always@(ALU_Operation ) 
+begin
+	if((ALU_Operation == Sub) && (result == 0))
+		Zflag =  1'b1;
+	else
+		Zflag =  1'b0;
+end
 					   
 //combiinational part ends here
 

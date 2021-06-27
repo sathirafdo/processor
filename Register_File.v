@@ -105,8 +105,8 @@ begin
             else
                 dataout = 12'b000000000000;
             
-        end
-        if (read_en)
+        end*/
+        /*if (read_en)
             begin
                 dataout = reg_set[betap] ;
 
@@ -127,8 +127,8 @@ begin
             end
         
         else 
-        // if(write_en)
-            // begin
+         if(write_en)
+            begin
             case (write_en)
                 R_en : reg_set[R] = 12'b11100011011 ;
                 row_en : reg_set[row] = 12'b11100011011 ;
@@ -142,8 +142,8 @@ begin
                 gammap_en : reg_set[gammap] = 12'b11100011011 ;
                 Total_en: reg_set[Total] = 12'b11100011011 ;
                 //default: trash <= datain;
-            endcase*/
-            // end
+            endcase
+            end*/
     end
     //R_reg <= reg_set[R];
     //Total_reg <= reg_set[Total];   

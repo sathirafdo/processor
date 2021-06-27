@@ -141,7 +141,9 @@ localparam [5:0]
            LOAD3 = 6'd44,
            LOAD4 = 6'd45,
            FETCH4 = 6'd46,
-           LOAD5 = 6'd47;    
+           LOAD5 = 6'd47,
+           JUMPZY3 = 6'd48,
+           JUMPZN2 = 6'd49;    
 
 
 reg [5:0] current_st, next_st;
@@ -254,7 +256,7 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
                 INC : next_st = INC1;
                 JUMP : next_st = JUMP1;
                 JUMPZ :begin
-                if (Zflag == 1'b0)  
+                if (Zflag == 1'b1)  
                     next_st = JUMPZY1; 
                 else 
                     next_st = JUMPZN1;
@@ -756,7 +758,7 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             mem_read = InsM; 
             mem_write = 1'b0;
             alu_op = IDLE;
-            PC_Inc = 1'b1;
+            PC_Inc = 1'b1; //this is not necessary as pc is overwritten in next cycle
             next_st = JUMPZY2;
         end
 
@@ -769,20 +771,45 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             mem_write = 1'b0;
             alu_op = IDLE;
             PC_Inc = 1'b0;
+            next_st = JUMPZY3;        
+        end
+
+        JUMPZY3 :
+        begin
+            $display("JUMPZY3");
+            write_en = AR;
+            read_en = PC ;            
+            mem_read = Null0; 
+            mem_write = 1'b0;
+            alu_op = IDLE;
+            PC_Inc = 1'b0;
             next_st = FETCH1;        
         end
 
         JUMPZN1 :
         begin
-            $display("Jump ZN");
+            $display("Jump ZN1");
             write_en = None;
             read_en = None ;            
             mem_read = Null0; 
             mem_write = 1'b0;
             alu_op = IDLE;
             PC_Inc = 1'b1;
-            next_st = FETCH1; 
+            next_st = JUMPZN2; //TODO add ar<-pc step
         end
+
+        JUMPZN2 :
+        begin
+            $display("JUMPZN2");
+            write_en = AR;
+            read_en = PC ;            
+            mem_read = Null0; 
+            mem_write = 1'b0;
+            alu_op = IDLE;
+            PC_Inc = 1'b0;
+            next_st = FETCH1;        
+        end
+
         ENDOP1 :
         //TODO these are wrong states added to check if the latch is removed
             begin

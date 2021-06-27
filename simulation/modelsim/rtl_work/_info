@@ -1,59 +1,54 @@
 m255
 K4
 z2
-!s11f vlog 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
 !i10d 8192
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/sathiralanka/Desktop/Processor code/simulation/modelsim
+Z0 dC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/simulation/modelsim
 vAC
-Z1 !s110 1624655845
+Z1 !s110 1624768187
 !i10b 1
-!s100 c;X4^<FBfQfDfA:>@gPU43
-Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IRRbglI]DLZ48[T:]RRaaK3
-Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s100 =7^Sm[?0Eh`VBb?iz5NHn1
+II2G?0_CjDCGfKX7H1iMhn3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1624563506
-8C:/Users/sathiralanka/Desktop/Processor code/AC.v
-FC:/Users/sathiralanka/Desktop/Processor code/AC.v
-!i122 6
-L0 1 28
-Z4 OV;L;2020.1;71
+Z3 w1624761078
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AC.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AC.v
+L0 1
+Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1624655845.000000
-!s107 C:/Users/sathiralanka/Desktop/Processor code/AC.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/AC.v|
+Z5 !s108 1624768187.000000
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AC.v|
 !i113 1
 Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work {+incdir+C:/Users/sathiralanka/Desktop/Processor code}
+Z7 !s92 -vlog01compat -work work {+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor}
 Z8 tCvgOpt 0
 n@a@c
 vALU
-R1
+Z9 !s110 1624768188
 !i10b 1
-!s100 kR>O8Yz5`:>jPmKRj^=Ag1
+!s100 @1LOXb`Wf>WAPl=7MCcH`0
+Ih<3GZ@BVgFOYA`;iGh[UG1
 R2
-Ibj5Io7FGl?gH8aHhKBB7;1
-R3
 R0
-w1624647236
-8C:/Users/sathiralanka/Desktop/Processor code/ALU.v
-FC:/Users/sathiralanka/Desktop/Processor code/ALU.v
-!i122 9
-L0 1 73
+w1624763974
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v
+L0 1
 R4
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/sathiralanka/Desktop/Processor code/ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/ALU.v|
+Z10 !s108 1624768188.000000
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v|
 !i113 1
 R6
 R7
@@ -62,73 +57,67 @@ n@a@l@u
 vAR
 R1
 !i10b 1
-!s100 Poj<53BiGJEU61Je6XzCi0
+!s100 8T`1O]UoDS<1gbK`8DQL53
+IFA;3;zD_hIJ8HOWG29W<n3
 R2
-IQT>dCDl:^5Wn8NUV5Dilz1
-R3
 R0
-w1624510447
-8C:/Users/sathiralanka/Desktop/Processor code/AR.v
-FC:/Users/sathiralanka/Desktop/Processor code/AR.v
-!i122 8
-L0 9 38
+R3
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AR.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AR.v
+L0 9
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/sathiralanka/Desktop/Processor code/AR.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/AR.v|
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AR.v|
 !i113 1
 R6
 R7
 R8
 n@a@r
 vControl_Unit
-Z9 !s110 1624655843
+Z11 !s110 1624768186
 !i10b 1
-!s100 ADEQMiIh5PQMO<ZIRYXzZ0
+!s100 [YH@LjPohB8m2[@USFaXK2
+IoC05YZ4MJ:3B]g>2QzfN>0
 R2
-Ifb=i?X11jVJD4i9d7fWfM3
-R3
 R0
-w1624562294
-8C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v
-FC:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v
-!i122 2
-L0 6 814
+w1624767957
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v
+L0 6
 R4
 r1
 !s85 0
 31
-Z10 !s108 1624655843.000000
-!s107 C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/Control_Unit.v|
+Z12 !s108 1624768185.000000
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v|
 !i113 1
 R6
 R7
 R8
 n@control_@unit
 vData_bus
-Z11 !s110 1624655844
+R1
 !i10b 1
-!s100 S2Ca9^OWZ_BI;:DHYZ8S[1
+!s100 N2a;]Uf^z93oG=B3;0MY=2
+I=26aM<1GKYo]3cBfEaNeN1
 R2
-Ih;bc0a9N_IOKUzo7T0Mj92
-R3
 R0
-w1624515323
-8C:/Users/sathiralanka/Desktop/Processor code/Data_bus.v
-FC:/Users/sathiralanka/Desktop/Processor code/Data_bus.v
-!i122 5
-L0 1 53
+R3
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Data_bus.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Data_bus.v
+L0 1
 R4
 r1
 !s85 0
 31
-Z12 !s108 1624655844.000000
-!s107 C:/Users/sathiralanka/Desktop/Processor code/Data_bus.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/Data_bus.v|
+R5
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Data_bus.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Data_bus.v|
 !i113 1
 R6
 R7
@@ -137,73 +126,67 @@ n@data_bus
 vDR
 R1
 !i10b 1
-!s100 UofI>RJLhc^?Uh@ALAX7h0
+!s100 nR>IEE@E24UK;68Q3YFE30
+IeB5Hj6fRIf`NJ>_l1Im<42
 R2
-ImJ7fNCg4_i0UXPP3aQbFV3
-R3
 R0
-w1624531436
-8C:/Users/sathiralanka/Desktop/Processor code/DR.v
-FC:/Users/sathiralanka/Desktop/Processor code/DR.v
-!i122 7
-L0 10 54
+R3
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/DR.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/DR.v
+L0 10
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/sathiralanka/Desktop/Processor code/DR.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/DR.v|
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/DR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/DR.v|
 !i113 1
 R6
 R7
 R8
 n@d@r
 vFull_System_Copy
-R9
+!s110 1624768185
 !i10b 1
-!s100 Mc4RD]ifk`fLiG0k6QP4k2
+!s100 kEkC=7dPZ[RhYYbTo5gE:0
+IB9=O`2QlPNA]_`Z7gLDE^3
 R2
-IjH;mj>f2gHcP^HVN9]g>;1
-R3
 R0
-w1624655715
-8C:/Users/sathiralanka/Desktop/Processor code/Full_System_Copy.v
-FC:/Users/sathiralanka/Desktop/Processor code/Full_System_Copy.v
-!i122 1
-L0 2 150
+w1624761364
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v
+L0 2
 R4
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/sathiralanka/Desktop/Processor code/Full_System_Copy.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/Full_System_Copy.v|
+R12
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v|
 !i113 1
 R6
 R7
 R8
 n@full_@system_@copy
 vIns_Memory
-Z13 !s110 1624655846
+R9
 !i10b 1
-!s100 SUkdQc6;_F=COS1eSS_YX3
+!s100 dgZGR_RHk@RH^fj;kVA?Q3
+IijB`][o=V@mh9F7X7_5T23
 R2
-InIMe]KMbX88A<On;ZYk0d3
-R3
 R0
-w1624374064
-8C:/Users/sathiralanka/Desktop/Processor code/Ins_Memory.v
-FC:/Users/sathiralanka/Desktop/Processor code/Ins_Memory.v
-!i122 11
-Z14 L0 39 67
+R3
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory.v
+Z13 L0 39
 R4
 r1
 !s85 0
 31
-Z15 !s108 1624655846.000000
-!s107 C:/Users/sathiralanka/Desktop/Processor code/Ins_Memory.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/Ins_Memory.v|
+R10
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory.v|
 !i113 1
 R6
 R7
@@ -212,123 +195,113 @@ n@ins_@memory
 vIR
 R11
 !i10b 1
-!s100 cYgT9gI31cBKh@ddo]:HD3
+!s100 aNKS961?bdV3ggGi0THSP2
+IX;ZzRMHBVE8UbM?<FbhC^1
 R2
-IYD;:g61WQKM;Odo^TAOQ13
-R3
 R0
-w1624544537
-8C:/Users/sathiralanka/Desktop/Processor code/IR.v
-FC:/Users/sathiralanka/Desktop/Processor code/IR.v
-!i122 3
-L0 2 30
+R3
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/IR.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/IR.v
+L0 2
 R4
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/sathiralanka/Desktop/Processor code/IR.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/IR.v|
+Z14 !s108 1624768186.000000
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/IR.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/IR.v|
 !i113 1
 R6
 R7
 R8
 n@i@r
 vMemory_AR_DR_CU_tb
-R13
+!s110 1624768189
 !i10b 1
-!s100 dI0@Rjfz[@c2_JLgQh2kU3
+!s100 KzR1WY]<17XSc5THXRHD?1
+IRgO5YTe9;AzjOEz=DA_GP0
 R2
-If9<U:^EUFDCTT[>iG`cUz2
-R3
 R0
-w1624596200
-8C:/Users/sathiralanka/Desktop/Processor code/Memory_AR_DR_CU_tb.v
-FC:/Users/sathiralanka/Desktop/Processor code/Memory_AR_DR_CU_tb.v
-!i122 12
-L0 3 167
+R3
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_AR_DR_CU_tb.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_AR_DR_CU_tb.v
+L0 3
 R4
 r1
 !s85 0
 31
-R15
-!s107 C:/Users/sathiralanka/Desktop/Processor code/Memory_AR_DR_CU_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/Memory_AR_DR_CU_tb.v|
+!s108 1624768189.000000
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_AR_DR_CU_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_AR_DR_CU_tb.v|
 !i113 1
 R6
 R7
 R8
 n@memory_@a@r_@d@r_@c@u_tb
 vMemoryQ
-R13
+R9
 !i10b 1
-!s100 ?KRlcjNRYYPEjYXjE?_?F1
+!s100 fk7]VI?UchQ`kDB331[HM1
+ING_hIcD9b=7DkJ^J9gPNH2
 R2
-IR5Dc1ZQ@7deQlNWI?]DEY3
-R3
 R0
-w1624345903
-8C:/Users/sathiralanka/Desktop/Processor code/MemoryQ.v
-FC:/Users/sathiralanka/Desktop/Processor code/MemoryQ.v
-!i122 10
-R14
+R3
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/MemoryQ.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/MemoryQ.v
+R13
 R4
 r1
 !s85 0
 31
-R5
-!s107 C:/Users/sathiralanka/Desktop/Processor code/MemoryQ.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/MemoryQ.v|
+R10
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/MemoryQ.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/MemoryQ.v|
 !i113 1
 R6
 R7
 R8
 n@memory@q
 vPC
-R11
+R1
 !i10b 1
-!s100 A0X@G;gV?PRSBj3hBdG;G3
+!s100 LIQ@n?<K:S43fM02N:g7f1
+I^;g;kfbjBS_Y8c<=Wc5?V3
 R2
-ID0C8>MbHVYW9`5z_nFEA01
-R3
 R0
-w1624553465
-8C:/Users/sathiralanka/Desktop/Processor code/PC.v
-FC:/Users/sathiralanka/Desktop/Processor code/PC.v
-!i122 4
-L0 1 26
+R3
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/PC.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/PC.v
+L0 1
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/sathiralanka/Desktop/Processor code/PC.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/PC.v|
+R14
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/PC.v|
 !i113 1
 R6
 R7
 R8
 n@p@c
 vRegister_File
-R9
+!s110 1624768184
 !i10b 1
-!s100 Do5ndP1@@fT;YA56>0Rig1
+!s100 b2DF@PHNU[UJbP<1G4Nl52
+IBoeVR3c=7Z<GE5jDC<C7i0
 R2
-I9@^g3hnRaG]a08nLD]Uh23
-R3
 R0
-w1624655721
-8C:/Users/sathiralanka/Desktop/Processor code/Register_File.v
-FC:/Users/sathiralanka/Desktop/Processor code/Register_File.v
-!i122 0
-L0 1 165
+w1624762512
+8C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Register_File.v
+FC:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Register_File.v
+L0 1
 R4
 r1
 !s85 0
 31
-R10
-!s107 C:/Users/sathiralanka/Desktop/Processor code/Register_File.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/sathiralanka/Desktop/Processor code|C:/Users/sathiralanka/Desktop/Processor code/Register_File.v|
+!s108 1624768184.000000
+!s107 C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Register_File.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor|C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Register_File.v|
 !i113 1
 R6
 R7

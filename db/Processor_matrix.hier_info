@@ -3298,7 +3298,7 @@ result[8] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[9] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[10] <= result.DB_MAX_OUTPUT_PORT_TYPE
 result[11] <= result.DB_MAX_OUTPUT_PORT_TYPE
-Zflag <= Equal5.DB_MAX_OUTPUT_PORT_TYPE
+Zflag <= always0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Full_System_Copy|DR:DR_unit
@@ -3865,6 +3865,8 @@ dataout[11] <= dataout.DB_MAX_OUTPUT_PORT_TYPE
 clk => current_st~1.DATAIN
 start => Selector38.IN4
 start => Selector37.IN2
+reset => current_st.OUTPUTSELECT
+reset => current_st.OUTPUTSELECT
 reset => current_st.OUTPUTSELECT
 reset => current_st.OUTPUTSELECT
 reset => current_st.OUTPUTSELECT
