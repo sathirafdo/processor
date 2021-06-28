@@ -7,7 +7,9 @@ module Full_System_Copy
     parameter reg_file_count =11,
     parameter IR_width=12,
     parameter Im_width=8,
-    parameter current_PC_value = 12'b000000000000
+    parameter current_PC_value = 12'b000000000000,
+    parameter betap_reset =  12'd900,
+    parameter gammap_reset = 12'd1600
 
     
 )
@@ -58,7 +60,7 @@ Ins_Memory	Ins_Memory_inst (
             .q ( InsM_datain ));
 
 
-Register_File #(.reg_count(reg_file_count), .reg_width(reg_width)) RF_unit 
+Register_File #(.reg_count(reg_file_count), .reg_width(reg_width), .betap_reset(betap_reset), .gammap_reset(gammap_reset)) RF_unit 
             (.read_en(re),
             .write_en(we),
             .clk(clk),

@@ -1,7 +1,10 @@
 module Register_File
 #(  parameter reg_count = 11, // Register files + R register
-    parameter reg_width = 12
+    parameter reg_width = 12,
+    parameter betap_reset =  12'd900,
+    parameter gammap_reset = 12'd1600
 )
+
 
 (
     
@@ -23,8 +26,8 @@ reg [reg_width:0] trash; // trash value to assign at default case
 
 reg [(reg_width-1):0] reg_set [(reg_count-1):0];
 
-localparam betap_reset = 12'd900,
-           gammap_reset = 12'd1600;
+//localparam betap_reset = 12'd900,
+ //          gammap_reset = 12'd1600;
 
 localparam  R = 0,
             row = 1,

@@ -7,7 +7,9 @@ localparam CLK_PERIOD = 10,
            reg_count = 16,
            reg_width = 12,
            Im_width = 8,
-           current_PC_value = 12'b000000000000;
+           current_PC_value = 12'b000000000000,
+           betap_reset =  12'd900,
+           gammap_reset = 12'd1600;
            
            
 
@@ -101,7 +103,8 @@ Ins_Memory	Ins_Memory_inst (
 	.q ( InsM_datain )
 	);*/
 
-    Full_System_Copy #(.reg_width(reg_width),.reg_count(reg_count), .IR_width(IR_width),.Im_width(Im_width),.current_PC_value(current_PC_value)) system (
+    Full_System_Copy #(.reg_width(reg_width),.reg_count(reg_count), .IR_width(IR_width),.Im_width(Im_width),
+    .current_PC_value(current_PC_value), .betap_reset(betap_reset), .gammap_reset(gammap_reset)) system (
             .clk(clk),.reset(reset),.start(start),
             .read_en(read_en), 
             .write_en(write_en),

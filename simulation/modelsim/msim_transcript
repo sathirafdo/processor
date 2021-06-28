@@ -13,139 +13,139 @@
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Register_File.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:48 on Jun 28,2021
+# Start time: 15:50:50 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Register_File.v 
 # -- Compiling module Register_File
 # 
 # Top level modules:
 # 	Register_File
-# End time: 14:12:49 on Jun 28,2021, Elapsed time: 0:00:01
+# End time: 15:50:50 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:49 on Jun 28,2021
+# Start time: 15:50:50 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Full_System_Copy.v 
 # -- Compiling module Full_System_Copy
 # 
 # Top level modules:
 # 	Full_System_Copy
-# End time: 14:12:50 on Jun 28,2021, Elapsed time: 0:00:01
+# End time: 15:50:50 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:50 on Jun 28,2021
+# Start time: 15:50:50 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Control_Unit.v 
 # -- Compiling module Control_Unit
 # 
 # Top level modules:
 # 	Control_Unit
-# End time: 14:12:50 on Jun 28,2021, Elapsed time: 0:00:00
+# End time: 15:50:50 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/IR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:51 on Jun 28,2021
+# Start time: 15:50:51 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/IR.v 
 # -- Compiling module IR
 # 
 # Top level modules:
 # 	IR
-# End time: 14:12:51 on Jun 28,2021, Elapsed time: 0:00:00
+# End time: 15:50:51 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/PC.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:51 on Jun 28,2021
+# Start time: 15:50:51 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/PC.v 
 # -- Compiling module PC
 # 
 # Top level modules:
 # 	PC
-# End time: 14:12:51 on Jun 28,2021, Elapsed time: 0:00:00
+# End time: 15:50:51 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Data_bus.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:51 on Jun 28,2021
+# Start time: 15:50:52 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Data_bus.v 
 # -- Compiling module Data_bus
 # 
 # Top level modules:
 # 	Data_bus
-# End time: 14:12:52 on Jun 28,2021, Elapsed time: 0:00:01
+# End time: 15:50:52 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AC.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:52 on Jun 28,2021
+# Start time: 15:50:52 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AC.v 
 # -- Compiling module AC
 # 
 # Top level modules:
 # 	AC
-# End time: 14:12:52 on Jun 28,2021, Elapsed time: 0:00:00
+# End time: 15:50:52 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/DR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:52 on Jun 28,2021
+# Start time: 15:50:52 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/DR.v 
 # -- Compiling module DR
 # 
 # Top level modules:
 # 	DR
-# End time: 14:12:53 on Jun 28,2021, Elapsed time: 0:00:01
+# End time: 15:50:52 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AR.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:53 on Jun 28,2021
+# Start time: 15:50:52 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/AR.v 
 # -- Compiling module AR
 # 
 # Top level modules:
 # 	AR
-# End time: 14:12:53 on Jun 28,2021, Elapsed time: 0:00:00
+# End time: 15:50:53 on Jun 28,2021, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:53 on Jun 28,2021
+# Start time: 15:50:53 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/ALU.v 
 # -- Compiling module ALU
 # 
 # Top level modules:
 # 	ALU
-# End time: 14:12:53 on Jun 28,2021, Elapsed time: 0:00:00
+# End time: 15:50:53 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/MemoryQ.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:53 on Jun 28,2021
+# Start time: 15:50:53 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/MemoryQ.v 
 # -- Compiling module MemoryQ
 # 
 # Top level modules:
 # 	MemoryQ
-# End time: 14:12:53 on Jun 28,2021, Elapsed time: 0:00:00
+# End time: 15:50:53 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:53 on Jun 28,2021
+# Start time: 15:50:53 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Ins_Memory.v 
 # -- Compiling module Ins_Memory
 # 
 # Top level modules:
 # 	Ins_Memory
-# End time: 14:12:53 on Jun 28,2021, Elapsed time: 0:00:00
+# End time: 15:50:53 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vlog -vlog01compat -work work +incdir+C:/Users/user/Desktop/Semester\ 6B/Jayathu/sathira_processor {C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_AR_DR_CU_tb.v}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 14:12:54 on Jun 28,2021
+# Start time: 15:50:53 on Jun 28,2021
 # vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor" C:/Users/user/Desktop/Semester 6B/Jayathu/sathira_processor/Memory_AR_DR_CU_tb.v 
 # -- Compiling module Memory_AR_DR_CU_tb
 # 
 # Top level modules:
 # 	Memory_AR_DR_CU_tb
-# End time: 14:12:54 on Jun 28,2021, Elapsed time: 0:00:00
+# End time: 15:50:53 on Jun 28,2021, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  Memory_AR_DR_CU_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" Memory_AR_DR_CU_tb 
-# Start time: 14:12:54 on Jun 28,2021
+# Start time: 15:50:54 on Jun 28,2021
 # Loading work.Memory_AR_DR_CU_tb
 # Loading work.Full_System_Copy
 # Loading work.MemoryQ
@@ -167,9 +167,9 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: user  Hostname: DESKTOP-2QTJV9A  ProcessID: 20340
-#           Attempting to use alternate WLF file "./wlft5wg212".
+#           Attempting to use alternate WLF file "./wlftgxxwbc".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft5wg212
+#           Using alternate file: ./wlftgxxwbc
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
