@@ -26,86 +26,90 @@ BEGIN
 14 : 1;          --LOAD
 15 : 3;        --address of [alpa_address]
 16 : 9;         --MVAC_alphap
-17 : 1;          --LOAD
-18 : 5;      --address of [gamma_address]
-19 : 11;      --MVAC_gammap
-20 : 1;          --LOAD
-21 : 4;       --address of [beta_address]
-22 : 10;           --MVAC_betap   ---- betap <- AC
-23 : 21;          --MOV_betap  ---- AC <- betap
-24 : 31;          --LOAD REG
-25 : 12;         --MVAC_R
-26 : 20;          --MOV_alphap
-27 : 31;          --LOAD REG
-28 :  2;           --MUL
-29 : 12;          --MVAC_R
-30 : 19;          ----MOV_total
-31 : 3;           --ADD
-32 : 8;           --MVAC_total
-33 : 27;          --MOV_rnow
-34 : 5;           --INC
-35 : 16;          --MVAC_rnow
-36 : 12;          --MVAC_R
-37 : 24;          --MOV_row //MOV_r
-38 : 4;           --SUB
-39 : 7;           --JUMPZ
-40 : 49 ;         --check this
-41 : 20;          --MOV_alphap
-42 : 5;           --INC
-43 : 9;           --MVAC_alphap
-44 : 21;          --MOV_betap
-45 : 5;           --INC
-46 : 10;          --MVAC_betap
-47 :  6;           --JUMP PC
-48 : 23;
-49 : 19;          --MOV_TOTAL
-50 : 30;         --STORE
-51 : 22;           --MOV_gammap
-52 :  5;          --INC
-53 : 11;           --MVACgammap
-54 :  0;          --CLR
-55 :  8;          --MVAC_total
-56 : 28;           --MOV_cATnow
-57 :  5;          --INC
-58 :  17;         --MVAC_cATnow
-59 :  12;          --MVAC_ R
-60 :  25;          --MOV_cAT
-61 :   4;          --SUB
-62 :  7;          --JUMPZ PC
-63 :  77;
-64 :  20;          --MOV_alphap
-65 :   5;          --INC
-66 :   9;          --MVAC_aphap
-67 :  24;        --MOV_row
-68 :  12;         --MVAC_R
-69 :  21;         --MOV  betap
-70 :   4;         --SUB
-71 :   5;         --INC
-72 :  10;           --MVAC _betap
-73 :   0;           --CLR
-74 :  16;         --MVAC_rnow
-75 :   6;           --JUMP PC
-76 :  23;
-77  : 0;         --CLR
-78 : 16;         --MVAC_rnow
-79 :17;         --MVAC_cAtnow
-80 : 29;          --MOV_cBnow
-81  : 5;           --INC
-82 : 18;          --MVAC_cBnow
-83 :12;          --MVAC_R
-84 :26;          --MOV_cB
-85  :4;           --SUB
-86  :7;           --JUMPZ PC
-87 : 96;
-88 :1;           --LOAD
-89  :3;         --( A matrix first address)
-90 :9;           --MVAC_alphap
-91  :21;          --MOV_betap
-92  :5;           --INC
-93 :10;          --MVAC_betap
-94  : 6;           --JUMP PC
-95  :23;
-96  : 32;          --ENDOP
+
+
+--17 : 1;          --LOAD
+--18 : 5;      --address of [gamma_address]%
+--19 : 11;      --MVAC_gammap%
+--20 : 1;          --LOAD%
+--21 : 4;       --address of [beta_address]%
+--22 : 10;           --MVAC_betap   ---- betap <- AC
+
+
+17 : 21;          --MOV_betap  ---- AC <- betap
+18 : 31;          --LOAD REG
+19 : 12;         --MVAC_R
+20 : 20;          --MOV_alphap
+21 : 31;          --LOAD REG
+22 :  2;           --MUL
+23 : 12;          --MVAC_R
+24 : 19;          ----MOV_total
+25 : 3;           --ADD
+26 : 8;           --MVAC_total
+27 : 27;          --MOV_rnow
+28 : 5;           --INC
+29 : 16;          --MVAC_rnow
+30 : 12;          --MVAC_R
+31 : 24;          --MOV_row //MOV_r
+32 : 4;           --SUB
+33 : 7;           --JUMPZ
+34 : 49 ;         --check this
+35 : 20;          --MOV_alphap
+36 : 5;           --INC
+37 : 9;           --MVAC_alphap
+38 : 21;          --MOV_betap
+39 : 5;           --INC
+40 : 10;          --MVAC_betap
+41 :  6;           --JUMP PC
+42 : 17;
+43 : 19;          --MOV_TOTAL
+44 : 30;         --STORE
+45 : 22;           --MOV_gammap
+46 :  5;          --INC
+47 : 11;           --MVACgammap
+48 :  0;          --CLR
+49 :  8;          --MVAC_total
+50 : 28;           --MOV_cATnow
+51 :  5;          --INC
+52 :  17;         --MVAC_cATnow
+53 :  12;          --MVAC_ R
+54 :  25;          --MOV_cAT
+55 :   4;          --SUB
+56 :  7;          --JUMPZ PC
+57 :  71;
+58 :  20;          --MOV_alphap
+59 :   5;          --INC
+60 :   9;          --MVAC_aphap
+61 :  24;        --MOV_row
+62 :  12;         --MVAC_R
+63 :  21;         --MOV  betap
+64 :   4;         --SUB
+65 :   5;         --INC
+66 :  10;           --MVAC _betap
+67 :   0;           --CLR
+68 :  16;         --MVAC_rnow
+69 :   6;           --JUMP PC
+70 :  17;
+71 : 0;         --CLR
+72 : 16;         --MVAC_rnow
+73 :17;         --MVAC_cAtnow
+74 : 29;          --MOV_cBnow
+75 : 5;           --INC
+76 : 18;          --MVAC_cBnow
+77 :12;          --MVAC_R
+78 :26;          --MOV_cB
+79 :4;           --SUB
+80 :7;           --JUMPZ PC
+81 : 90;
+82 :1;           --LOAD
+83 :3;         --( A matrix first address)
+84 :9;           --MVAC_alphap
+85 :21;          --MOV_betap
+86 :5;           --INC
+87 :10;          --MVAC_betap
+88 : 6;           --JUMP PC
+89 :17;
+90 : 32;          --ENDOP
 
 
 END; 

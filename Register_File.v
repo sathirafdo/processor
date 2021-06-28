@@ -23,6 +23,9 @@ reg [reg_width:0] trash; // trash value to assign at default case
 
 reg [(reg_width-1):0] reg_set [(reg_count-1):0];
 
+localparam betap_reset = 12'd900,
+           gammap_reset = 12'd1600;
+
 localparam  R = 0,
             row = 1,
             cAT= 2,
@@ -53,11 +56,16 @@ begin
     if (reset) 
 		begin
         
-        for (i = 0 ; i< reg_count ;i=i+1 ) 
+        for (i = 0 ; i< reg_count-3 ;i=i+1 ) 
         begin
             reg_set[i] = 12'b00000000000 ;           
         end
-        //KLT 1st law reg_set[betap] = 12'b00100011010 ;
+
+        //KLT 1st law 
+        reg_set[betap] = betap_reset ;
+        reg_set[gammap] = gammap_reset;
+        reg_set[Total_en] = 12'b000000000000;
+        
 		  end
     else         
     begin
