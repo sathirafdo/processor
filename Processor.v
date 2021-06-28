@@ -109,7 +109,7 @@ Ins_Memory	Ins_Memory_inst (
 
 reg one_clock_passed = 1'b0;
 
-always @(posedge clk) 
+always @(posedge clk)  
 begin
     if(one_clock_passed == 1'b0) 
         begin
