@@ -64,9 +64,9 @@ begin
         //KLT 1st law 
         reg_set[betap] = betap_reset ;
         reg_set[gammap] = gammap_reset;
-        reg_set[Total_en] = 12'b000000000000;
-        
-		  end
+        reg_set[Total] = 12'b000000000000;
+
+		end
     else         
     begin
         if (write_en[R] == 1'b1     )
