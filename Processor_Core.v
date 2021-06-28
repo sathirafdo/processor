@@ -11,27 +11,23 @@ module Processor_Core
     parameter current_PC_value = 12'b000000000000,
     parameter betap_reset =  12'd900,
     parameter gammap_reset = 12'd1600
-
-    
 )
 
 (
     input wire start,
     input wire clk,reset,
 
-    
+    //For demonstration purposes
     output wire Zflag,PC_Inc,
     output wire [IR_width - 1:0] opcode,
     output wire [2:0] alu_op,
     output wire [reg_count - 1:0] read_en, write_en, 
     output wire [1:0] mem_read, //this signal goes to dr so no need to output in actual system
+    output wire [reg_width-1:0] PC_to_AR, bus_dataout,ALU_result,Register_file_out,AC_out,
     
-    output wire [reg_width-1:0] AR_to_mem,DR_out,bus_dataout,,ALU_result,Register_file_out,AC_out,
-    
-    
-    output wire [reg_width-1:0] PC_to_AR,
-    output wire mem_write,
-    output wire [reg_width-1:0]    
+    //actual necessarry wires
+    output wire [reg_width-1:0] AR_to_mem,DR_out,
+    output wire mem_write,   
     input wire [reg_width-1:0] InsM_datain,DM_datain
     
 );
@@ -51,19 +47,19 @@ wire [10:0] re,we;
 assign re = read_en[14:4]; //TODO remove these wires
 assign we = write_en[14:4]; //TODO remove these wires and rewire back to wite read enable
 
-MemoryQ	MemoryQ_inst (
-            .address ( AR_to_mem ),
-            .clock ( clk ),
-            .data ( DR_out ),
-            .wren ( mem_write ),
-            .q ( DM_datain ));
+// MemoryQ	MemoryQ_inst (
+//             .address ( AR_to_mem ),
+//             .clock ( clk ),
+//             .data ( DR_out ),
+//             .wren ( mem_write ),
+//             .q ( DM_datain ));
 
-Ins_Memory	Ins_Memory_inst (
-            .address (AR_to_mem[(Im_width-1):0] ),
-            .clock ( clk ),
-            .data ( im_data_sig ),//not necessary grounded
-            .wren ( im_wren_sig ),//not necessary grounded set alwasy zero to disable writing always
-            .q ( InsM_datain ));
+// Ins_Memory	Ins_Memory_inst (
+//             .address (AR_to_mem[(Im_width-1):0] ),
+//             .clock ( clk ),
+//             .data ( im_data_sig ),//not necessary grounded
+//             .wren ( im_wren_sig ),//not necessary grounded set alwasy zero to disable writing always
+//             .q ( InsM_datain ));
 
 
 Register_File #(.reg_count(reg_file_count), .reg_width(reg_width), .betap_reset(betap_reset), .gammap_reset(gammap_reset)) RF_unit 
