@@ -20,6 +20,9 @@ initial begin
         clk <= ~clk;
     end
 end
+localparam betap_reset =  12'd900,
+           gammap_reset = 12'd1600;
+
 
 wire [reg_count - 1:0] read_en, write_en;
 wire Zflag,PC_Inc;
@@ -101,7 +104,8 @@ Ins_Memory	Ins_Memory_inst (
 	.q ( InsM_datain )
 	);*/
 
-    Full_System_Copy #(.reg_width(reg_width),.reg_count(reg_count), .IR_width(IR_width),.Im_width(Im_width),.current_PC_value(current_PC_value)) system (
+    Full_System_Copy #(.reg_width(reg_width),.reg_count(reg_count), .IR_width(IR_width),.Im_width(Im_width),
+    .current_PC_value(current_PC_value), .betap_reset(betap_reset),.gammap_reset(gammap_reset)) system (
             .clk(clk),.reset(reset),.start(start),
             .read_en(read_en), 
             .write_en(write_en),

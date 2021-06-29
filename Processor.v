@@ -11,10 +11,12 @@ module Processor
     input wire start,
     input wire clk,reset
 );
-localparam betap_reset1 = 12'd900 ,
-            gammap_reset1= 12'd1600,
-            betap_reset2 =  12'd900,
-            gammap_reset2 = 12'd1600;
+
+localparam betap_reset1 = 12'd900 , 
+            gammap_reset1= 12'd1600;
+
+localparam  betap_reset2 =  12'd1225,
+            gammap_reset2 = 12'd1925;
 
 //TODO  1. add signal to iindicate end of opearation
 //      2. add AR to mem logic (whick ar to mem to choose out of the 2 whrn both are given)
@@ -61,7 +63,7 @@ Processor_Core #(.reg_width(reg_width),.reg_count(reg_count),.IR_width(IR_width)
             .mem_write(mem_write1),
             .mem_read(mem_read1),
             .PC_to_AR(PC_to_AR1),
-            .AR_to_mem(AR_to_mem1),
+            .AR_to_mem(AR_to_mem1), 
             .InsM_datain(InsM_datain),
             .DM_datain(DM_datain),
             .DR_out(DR_out1),
@@ -106,6 +108,17 @@ Ins_Memory	Ins_Memory_inst (
             .wren ( im_wren_sig ),//not necessary grounded set alwasy zero to disable writing always
             .q ( InsM_datain ));
 
+
+// reg [reg_width-1:0] AR_to_mem;
+
+//when one AR to mem changes the output of this shoul change to 
+// always @(AR_to_mem1,AR_to_mem2) 
+//     begin
+//         if(AR_to_mem == AR_to_mem1)
+//             AR_to_mem = AR_to_mem2;
+//         if(AR_to_mem == AR_to_mem2)
+//             AR_to_mem = AR_to_mem1;
+//     end
 
 reg one_clock_passed = 1'b0;
 
