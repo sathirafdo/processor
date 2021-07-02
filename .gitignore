@@ -61,6 +61,7 @@
 */incremental_db/
 */simulation/
 **/modelsim/
+!**/modelsim/*.dat
 */timing/
 */testbench/
 */*_sim/
