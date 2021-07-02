@@ -103,7 +103,7 @@ set_global_assignment -name EDA_TEST_BENCH_NAME Processor_Multiport_tb -section_
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Processor_Multiport_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Processor_Multiport_tb -section_id Processor_Multiport_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Processor_Multiport_tb.v -section_id Processor_Multiport_tb
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name LICENSE_FILE Memory_Init.dat
 set_global_assignment -name VERILOG_FILE Multiport_ram.v
 set_global_assignment -name VERILOG_FILE Processor_Multiport.v
 set_global_assignment -name VERILOG_FILE Processor_Core.v
@@ -121,3 +121,4 @@ set_global_assignment -name VERILOG_FILE AR.v
 set_global_assignment -name VERILOG_FILE ALU.v
 set_global_assignment -name QIP_FILE MemoryQ.qip
 set_global_assignment -name QIP_FILE Ins_Memory.qip
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -77,7 +77,7 @@ Processor_Core #(.reg_width(reg_width),.reg_count(reg_count),.IR_width(IR_width)
 Processor_Core #(.reg_width(reg_width),.reg_count(reg_count),.IR_width(IR_width),
                     .Im_width(Im_width),.current_PC_value(current_PC_value),
                     .betap_reset(betap_reset2),.gammap_reset(gammap_reset2)) core2 (
-            .clk(clk2),.reset(reset),.start(start2),
+            .clk(clk2),.reset(reset),.start(start),
             .read_en(read_en2), 
             .write_en(write_en2),
             .Zflag(Zflag2),
