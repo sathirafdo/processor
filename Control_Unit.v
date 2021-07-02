@@ -848,7 +848,7 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             next_st = FETCH1;        
         end
 
-        ENDOP1 :
+        ENDOP1 ://TODO VERY IMPORTANT !!! add end signal tostop test bench
         //TODO these are wrong states added to check if the latch is removed
             begin
             $display("End op"); 

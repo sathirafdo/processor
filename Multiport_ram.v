@@ -14,7 +14,7 @@ module Multiport_ram
     input fright,
     output reg [mem_width-1:0] dataout1,dataout2
 );
-
+    //TODO VERY IMPORTANT remove fright input port
     integer i;
 
     reg [mem_width - 1:0] test_memory [mem_size -1 :0];

@@ -96,6 +96,7 @@ Processor_Core #(.reg_width(reg_width),.reg_count(reg_count),.IR_width(IR_width)
             .AC_out(AC_out2),
             .Register_file_out(Register_file_out2));
 
+//TODO remove this memory
 MemoryQ	MemoryQ_inst (
             .address ( AR_to_mem1 ), //todo add logic to take from both cores
             .clock ( clk ),
