@@ -16,7 +16,7 @@ reg   clk                                  = 0 ;
 reg   reset                                = 0 ;
 
 // Processor Outputs
-
+wire endop_signal1,endop_signal2;
 
 initial begin
     clk <= 0;
@@ -36,7 +36,9 @@ Processor_Multiport #(
  u_Processor (
     .start                   ( start   ),
     .clk                     ( clk     ),
-    .reset                   ( reset   )
+    .reset                   ( reset   ),
+    .endop_signal1(endop_signal1),
+    .endop_signal2(endop_signal2)
 );
 
 initial begin
@@ -51,8 +53,20 @@ initial begin
 
     @(posedge clk);
     start = 1'b0;
+
+
     
     // $finish;
 end
+always @(posedge clk) 
+begin
+    if (endop_signal1==1'b1 && endop_signal2==1'b1)
+        begin
+        $display("Finishing");
+        $stop;
+        end
+    
+end
+
 
 endmodule

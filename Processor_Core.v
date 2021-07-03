@@ -28,7 +28,8 @@ module Processor_Core
     //actual necessarry wires
     output wire [reg_width-1:0] AR_to_mem,DR_out,
     output wire mem_write,   
-    input wire [reg_width-1:0] InsM_datain,DM_datain
+    input wire [reg_width-1:0] InsM_datain,DM_datain,
+    output wire endop_signal
     
 );
 
@@ -44,27 +45,12 @@ AC_to_ALU;
 wire [reg_width-1:0] im_data_sig;
 wire im_wren_sig;
 wire [10:0] re,we;
-assign re = read_en[14:4]; //TODO remove these wires
-assign we = write_en[14:4]; //TODO remove these wires and rewire back to wite read enable
-
-// MemoryQ	MemoryQ_inst (
-//             .address ( AR_to_mem ),
-//             .clock ( clk ),
-//             .data ( DR_out ),
-//             .wren ( mem_write ),
-//             .q ( DM_datain ));
-
-// Ins_Memory	Ins_Memory_inst (
-//             .address (AR_to_mem[(Im_width-1):0] ),
-//             .clock ( clk ),
-//             .data ( im_data_sig ),//not necessary grounded
-//             .wren ( im_wren_sig ),//not necessary grounded set alwasy zero to disable writing always
-//             .q ( InsM_datain ));
-
+assign re = read_en[14:4]; 
+assign we = write_en[14:4];
 
 Register_File #(.reg_count(reg_file_count), .reg_width(reg_width), .betap_reset(betap_reset), .gammap_reset(gammap_reset)) RF_unit 
-            (.read_en(re),
-            .write_en(we),
+            (.read_en(read_en[14:4]),
+            .write_en(write_en[14:4]),
             .clk(clk),
             .reset(reset),
             .datain(bus_dataout),
@@ -148,7 +134,8 @@ Control_Unit #( .IR_width(IR_width),.Reg_count(reg_count)) CU (
             .write_en(write_en),
             .mem_write(mem_write),
             .PC_Inc(PC_Inc),
-            .mem_read(mem_read));
+            .mem_read(mem_read),
+            .endop_signal(endop_signal));
 
 
 

@@ -4,10 +4,8 @@ module ALU
 	input clk,reset,
 	input [2:0] ALU_Operation, // comes from the control unit
 	input [reg_width-1:0] AC,Bus, // data from AC and Bus
-	// output reg [reg_width-1:0] result,// output to AC
-	// output reg Zflag
 	output [reg_width-1:0] result
-	// output reg Zflag //moving z flag to ac
+	//moved z flag to ac
 );
 
 localparam IDLE = 3'b000,
@@ -18,8 +16,7 @@ localparam IDLE = 3'b000,
            Plus1 = 3'b101,
            Zero = 3'b110;
 
-//combiinational part
-
+//combinational part
 
 assign result =(ALU_Operation == IDLE) ? 12'bx : 
            			(ALU_Operation == Pass) ? Bus :
@@ -30,65 +27,6 @@ assign result =(ALU_Operation == IDLE) ? 12'bx :
 					(ALU_Operation == Zero) ? 12'b000000000000 :
            			12'bx;
 
-/*
-//moving z flag to ac
-always@(result) 
-begin
-	if (ALU_Operation == Sub)
-	begin
-	if(result == 12'b000000000000)
-		begin
-		Zflag =  1'b1;
-		$display("inside a z flag zero operation result is zero");
-		end
-	else
-		begin
-		Zflag =  1'b0;
-		$display("inside z lfag result not zero");
-		end
-	end
-end
-*/
-				   
-//combiinational part ends here
-
-//   always @( reset,ALU_Operation ) 
-//   begin
-// 		if (reset) 
-// 			begin			
-// 				result = 12'b000000000000;
-// 				Zflag = 1'b0;
-// 			end		
-			
-// 		else      
-
-// 			begin
-// 				case(ALU_Operation)
-// 					IDLE :
-// 						result = 12'bx;
-// 					Pass:
-// 						result = Bus;						
-// 					Add:
-// 						result = AC + Bus;
-// 					Sub:
-// 						result = AC - Bus;
-// 					Mul:
-// 						result = AC*Bus;
-// 					Plus1:
-// 						result = AC+12'b000000000001;
-// 					Zero:
-// 						result = 12'b000000000000;
-// 					default:
-// 						result = 12'bx;
-// 				endcase
-// 			end
-			
-// 		if (result==12'b000000000000)
-// 			Zflag = 1'b1;
-// 		else
-// 			Zflag = 1'b0;
-			
-// 	end
 	endmodule
 
 /*module add_sub
@@ -161,7 +99,7 @@ module pass
 
 endmodule
 
-//TODO not completed
+//not completed
 module Idle 
 #(parameter reg_width = 12)
 (

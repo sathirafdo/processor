@@ -1,8 +1,3 @@
-
-//TODO currenly memory read signal is provided at 
-//address assigning cycle and also DR<-M cycle
-// if the 1st cycle signal is unnecessary or causes issues remove that
-
 module Control_Unit
 #(
     parameter IR_width = 12,
@@ -15,7 +10,9 @@ module Control_Unit
     output reg [2:0] alu_op,
     output reg [Reg_count - 1:0] read_en, write_en,
     output reg mem_write, PC_Inc,
-    output reg [1:0] mem_read
+    output reg [1:0] mem_read,
+
+    output reg endop_signal
 
 );
 
@@ -161,18 +158,17 @@ always @(posedge clk) begin
     end
 end
 
-always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
+always @(*) begin // 
     
     //next_st = current_st;
 
-    //TODO these might be wrong states check these ----------------------------------------------
     write_en = 16'bx;
     read_en = 16'bx;
     mem_read = 2'bx;  
     mem_write = 1'bx;         
     alu_op = 3'bx;
     PC_Inc = 1'bx;  
-    //TODO the above might be wrong states check these  -----------------------------
+    
 
     case (current_st)
         Idle : begin
@@ -180,21 +176,21 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             if (start)
                 begin
 
-                //TODO these might be wrong states check these ---------------------------
+                
                 $display("start");
                 write_en = 16'bx;
                 read_en = 16'bx;
                 mem_read = 2'bx;  
                 mem_write = 1'bx;         
                 alu_op = 3'bx;
-                PC_Inc = 1'bx;  
-                //TODO the above might be wrong states check these    ---------------------- 
+                PC_Inc = 1'bx;
+                endop_signal =1'b0;  
 
                 next_st = FETCH1;
                 end
 				
             else
-                // TODO  : Implement control signal for idle
+                
 				begin
                 $display("idle");
                 write_en = 16'bx;
@@ -320,8 +316,8 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             $display("Load2");
             write_en = AR;
             read_en = DR;            
-            mem_read = Null0; //TODO removed DataM from here.check if got the corrct results(if results are correct change the other places with 2 consecutive Datam ASSIGNMWNTS)
-            //TODO if there are timing issues chhange this to NUll0
+            mem_read = Null0; 
+            //TODO removed DataM from here.check if got the corrct results(if results are correct change the other places with 2 consecutive Datam ASSIGNMWNTS)
             //memory does not need an enabling signal to output a value it just needs an address
             //mem read enabling signal controls data input from memmry path to DR
             //as the address is provided in this clock cycle.the required data is not avaibale yet(as it akes 2 clock cycles)(some other unnecessary data is avaible)
@@ -348,7 +344,8 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             $display("Load4");
             write_en = DR;
             read_en = None;            
-            mem_read = DataM;//TODO DataM //this signal is actually recived by DR as the enabling signal to take data in from Data memmory 
+            mem_read = DataM;
+            //this signal is actually recived by DR as the enabling signal to take data in from Data memmory 
             //as we provded the address in the last clock cycle.data is avaible now so we can enable DR data memoy in path and take data is
             mem_write = 1'b0;
             alu_op = IDLE;
@@ -405,7 +402,7 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
         begin
             $display("Inc1");
             write_en = AC;
-            read_en = None; // TODO : One should be kept at one           
+            read_en = None;           
             mem_read = Null0; 
             mem_write = 1'b0;
             alu_op = Plus1;
@@ -833,7 +830,7 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             mem_write = 1'b0;
             alu_op = IDLE;
             PC_Inc = 1'b1;
-            next_st = JUMPZN2; //TODO add ar<-pc step
+            next_st = JUMPZN2; 
         end
 
         JUMPZN2 :
@@ -848,8 +845,8 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             next_st = FETCH1;        
         end
 
-        ENDOP1 ://TODO VERY IMPORTANT !!! add end signal tostop test bench
-        //TODO these are wrong states added to check if the latch is removed
+        ENDOP1 :
+        
             begin
             $display("End op"); 
             write_en = None;
@@ -860,13 +857,13 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
             PC_Inc = 1'b0;
             //wrong states end 
             next_st = Idle;
+            endop_signal =1'b1; 
             end
         
 
         default :
-        //TODO these are wrong states added to check if the latch is removed
-            begin
-            $display("Sadda thiya ganna epa Defult eke inne.Kavindyata kiyanna epa meeka gana.");
+        
+            $display("Sadda thiya ganna epa Defult eke inne.KP ta kiyanna epa meeka gana.");
             write_en = None;
             read_en = None ;            
             mem_read = Null0; 
@@ -882,3 +879,7 @@ always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
 end 
     
 endmodule
+
+//CHANGES
+//curentlty memory read is provided in 2 cycles. change this to provide only in correct cycle
+//check sensitivity list( we provide *) should we add *opcode ?*

@@ -1,11 +1,4 @@
-/* TODO
 
-always@(dataout)
-    memory = dataout
-
-Updated in the processor
-
-*/
 module AR
 #(
     parameter reg_width=12

@@ -18,7 +18,8 @@ localparam betap_reset1 = 12'd900 ,
 localparam  betap_reset2 =  12'd1225,
             gammap_reset2 = 12'd1925;
 
-//TODO  1. add signal to iindicate end of opearation
+//DO these if this is used !!!!!!!!!!!!!!!!!
+// done in multiport processor  1. add signal to iindicate end of opearation
 //      2. add AR to mem logic (whick ar to mem to choose out of the 2 whrn both are given)
 
 
