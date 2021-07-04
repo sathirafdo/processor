@@ -55,7 +55,7 @@ wire [reg_width-1:0] AR_to_mem2,DR_out2;
 
 Processor_Core #(.reg_width(reg_width),.reg_count(reg_count),.IR_width(IR_width),
                     .Im_width(Im_width),.current_PC_value(current_PC_value),
-                    .betap_reset(betap_reset1),.gammap_reset(gammap_reset1)) core1 (
+                    .betap_reset(betap_reset1),.gammap_reset(gammap_reset1), .core_number(0)) core1 (
             .clk(clk1),.reset(reset),.start(start),
             .mem_write(mem_write1),
             .AR_to_mem(AR_to_mem1), 
@@ -79,7 +79,7 @@ Processor_Core #(.reg_width(reg_width),.reg_count(reg_count),.IR_width(IR_width)
 
 Processor_Core #(.reg_width(reg_width),.reg_count(reg_count),.IR_width(IR_width),
                     .Im_width(Im_width),.current_PC_value(current_PC_value),
-                    .betap_reset(betap_reset2),.gammap_reset(gammap_reset2)) core2 (
+                    .betap_reset(betap_reset2),.gammap_reset(gammap_reset2), .core_number(1)) core2 (
             .clk(clk2),.reset(reset),.start(start),
             .mem_write(mem_write2),
             .AR_to_mem(AR_to_mem2),
