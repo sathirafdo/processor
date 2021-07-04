@@ -60,7 +60,7 @@ initial begin
 end
 always @(posedge clk) 
 begin
-    if (endop_signal1==1'b1 && endop_signal2==1'b1)
+    if (endop_signal1==1'b1 || endop_signal2==1'b1)
         begin
         $display("Finishing");
         $stop;

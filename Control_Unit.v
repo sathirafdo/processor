@@ -862,7 +862,7 @@ always @(*) begin //
         
 
         default :
-        
+            begin
             $display("Sadda thiya ganna epa Defult eke inne.KP ta kiyanna epa meeka gana.");
             write_en = None;
             read_en = None ;            

@@ -8,14 +8,15 @@ DATA_RADIX = DEC;                         % Enter BIN, DEC, HEX, OCT, or UNS; un
 
 CONTENT
 BEGIN
-
+%CHANGING THIS DOES NOT CHANGE ANYTHING !!!!!!!!!!!!!!!!!!!!!!!!!%
+%CHANGE THE DAT FILES !!!!!!!!!!!!!!!!!!!%
 0:  4;   %row A / column AT% 
 1:  2;   %column A or row B%
 2:  3;   % Column B%  
 3:200;   % alphap%
 4:900;   % beta p p%
 5:1600;   % gamma p %
-
+6: 1 ;    %number of cores %
 
 200: 6;  % start point of transposed matrix of a%        
 201: 67;
@@ -44,3 +45,36 @@ BEGIN
           
  % gamma p 1600 %                     
 END; 
+
+%
+0:  4;   %row A / column AT% 
+1:  2;   %column A or row B%
+2:  3;   % Column B%  
+3:200;   % alphap%
+4:900;   % beta p p%
+5:1600;   % gamma p %
+6: 1 ;    %number of cores %
+
+200: 6;  % start point of transposed matrix of a%        
+201: 67;
+202: 7;
+203: 9;
+204: 34;
+205: 54;
+206: 89;
+207: 30;
+
+900: 8;   % start point of matrix b%       
+901: 4;
+902: 2;
+903: 5;
+904: 3;
+905: 6;
+
+1225:8;
+1226:4;
+1227:2;
+1228:5;
+1229:3;
+1230:6;
+%
