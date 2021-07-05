@@ -43,7 +43,7 @@ BEGIN
 32 : 1; --LOAD
 33 : 3; --address of [alpa_address]
 34 : 9; --MVAC_alphap
-35 : 19; --MOV_Total
+35 : 19; --MOV_Total --core number 0,1,2
 36 : 5; --INC
 37 : 18; --MVAC_cBnow
 38 : 0; --CLR
@@ -65,7 +65,7 @@ BEGIN
 54 : 24; --MOV_row //MOV_r
 55 : 4; --SUB
 56 : 7; --JUMPZ
-57 : 63;      ---?????????????? ; --check this
+57 : 66;      ---?????????????? ; --check this
 58 : 20; --MOV_alphap
 59 : 5; --INC
 60 : 9; --MVAC_alphap
