@@ -36,10 +36,10 @@ BEGIN
 25 : 10; --MVAC_betap
 26 : 1; --LOAD
 27 : 2; --address of cB
-28 : 12; --MVAC_R
-29 : 19; --MOV_Total
-30 : 3; --ADD
-31 : 15; --MVAC_cB
+28 : 12; --MVAC_R           R= cB
+29 : 19; --MOV_Total        AC= core number
+30 : 3; --ADD               AC = cB + core number 
+31 : 15; --MVAC_cB          cB register =  cB + core number --why do we need this ?
 32 : 1; --LOAD
 33 : 3; --address of [alpa_address]
 34 : 9; --MVAC_alphap
