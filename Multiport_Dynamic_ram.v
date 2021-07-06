@@ -21,11 +21,26 @@ module Multiport_Dynamic_ram
 
     initial begin
         $display("Loading rom.");
-        $readmemh("Memory_Init.dat", test_memory);
+        // $readmemh("Memory_Init.dat", test_memory);
     end
+    
+wire [addr_width -1:0] addr_blocks [port_count -1 :0];
+wire [mem_width -1:0] data_in_blocks [port_count -1 :0];
+wire [mem_width -1:0] data_out_blocks [port_count -1 :0];
 
-    always @(posedge clk) begin
-        integer i;
+genvar j;
+generate        
+for (j = 0; j < port_count ; j=j+1) begin  : conversion     
+  assign addr_blocks[j] = address [(j+1)*addr_width-1 -:addr_width];
+  assign data_in_blocks[j] = datain [(j+1)*mem_width-1 -:mem_width];
+//   assign data_out_blocks[j]= dataout[(j+1)*mem_width-1 -:mem_width];
+end
+endgenerate 
+
+
+    integer i;
+always @(posedge clk) 
+    begin
         if (reset== 1'b1)
         begin
             dataout = {(mem_width*port_count-1){1'b0}};
@@ -34,27 +49,22 @@ module Multiport_Dynamic_ram
         end
         else
             begin
-            for (i = 0; port_count -1 < i; i=i+1 ) begin
-                 if(mem_write[i] ==1'b1)
-                    test_memory[address[(i+1)*addr_width-1 -:addr_width]] = datain[(i+1)*mem_width-1 -:mem_width];
-                // test_memory[address[(i+1)*addr_width -1 :i*addr_width]] = datain[(i+1)*mem_width -1 :i*mem_width];
-                //dataout 
-                //TODO !!!!!!!!!!!!!!!!!!!!!!!!!!! uncomment below part
-                dataout[(i+1)*mem_width-1 -:mem_width] = test_memory[address[(i+1)*addr_width-1 -:addr_width]];
+                $display("inside reset else");
+                $display("mem write is outside for loop %b",mem_write);
+
+            for (i = 0; port_count < i; i=i+1 ) 
+                begin
+                    $display("iteration count %d",i);
+                    $display("mem write is %b",mem_write);
+                    if(mem_write[i] ==1'b1) 
+                    begin
+                        $display("write thorugh port %d",i);
+                        test_memory[addr_blocks[i]] = data_in_blocks[i];
+                    end 
+
+                    dataout[(i+1)*mem_width-1 -:mem_width] = test_memory[addr_blocks[i]];  
+
+                end
             end
-
-            // if(mem_write1==1'b1)        
-            //     test_memory[address1] = datain1;
-            // if(mem_write2==1'b1)         
-            //     test_memory[address2] = datain2;
-
-            // dataout1 = test_memory[address1];
-            // dataout2 = test_memory[address2];    
-
-            end   
-
     end
-
-
-    
 endmodule

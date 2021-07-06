@@ -23,7 +23,7 @@ wire [reg_width-1:0] DM_datain [(core_count-1):0];
 
 wire [reg_width-1:0] AR_to_mem [(core_count-1):0];
 wire [reg_width-1:0] DR_out [(core_count-1):0];
-wire mem_write [(core_count-1):0];
+wire [(core_count-1):0] mem_write ;
 
 //these wires are not necesary .should be alwasy grounded
 wire [reg_width-1:0] im_data_sig;
@@ -95,7 +95,7 @@ Ins_Memory	Ins_Memory_inst (
     wire [reg_width*core_count-1:0] datain;   
     wire [(reg_width*core_count-1):0] dataout;
 
-integer j;
+genvar j;
 
 generate        
 for (j = 0; j < core_count ; j=j+1) begin  : conversion     

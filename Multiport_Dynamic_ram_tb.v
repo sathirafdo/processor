@@ -26,6 +26,7 @@ forever begin
     #(PERIOD/2);
     clk <= ~clk;
 end
+end
 
 /*initial
 begin
@@ -53,13 +54,11 @@ begin
     @(posedge clk);
         reset = 1'b1;
 
-    // @(posedge clk);
-    //     #(PERIOD*4/5);
-    //     reset = 1'b0;
+    @(posedge clk);
+        reset = 1'b0;
 
-    // @(posedge clk);
-    //     //#(PERIOD*4/5);
-    //     reset = 1'b1;
+    @(posedge clk);
+        #(PERIOD);
 
     // @(posedge clk);
     // begin
@@ -71,20 +70,31 @@ begin
         begin
         address = 24'b000000000000000000000001;  //0
         mem_write = 2'b01;
-        datain = 24'b000000000101b111111111000;  
-
-               
+        datain = 24'b000000000101111111111001;  
         end
 
+    @(posedge clk);
+        #(PERIOD);
+
+    @(posedge clk);
+        begin
+        address = 24'b000000000000000000000001;  //0
+        mem_write = 2'b00;
+        datain = 24'b000000000101111111111001;  
+        end
+
+    @(posedge clk);
+        #(PERIOD);
+        
     @(posedge clk);
         begin
         address = 24'b000000000100000000001000;  //4
         mem_write = 2'b11;
         datain = 24'b000000000100000000001000;  //4
-
         end
 
-     
+    @(posedge clk);
+        #(PERIOD);
 
     @(posedge clk);
         begin
@@ -97,7 +107,8 @@ begin
         // mem_write2 = 1'b0;
         // address2 = 12'b000000000011; //3
         // datain2  = 24'b011100000100000000001000; //3  */
-        
+    @(posedge clk);
+        #(PERIOD);    
         end
 
 
