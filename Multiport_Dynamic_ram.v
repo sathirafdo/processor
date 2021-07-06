@@ -45,20 +45,20 @@ always @(posedge clk)
         begin
             dataout = {(mem_width*port_count-1){1'b0}};
             // dataout2 = 12'b000000000000;
-            $display("inside reset");
+            // $display("inside reset");
         end
         else
             begin
-                $display("inside reset else");
-                $display("mem write is outside for loop %b",mem_write);
+                // $display("inside reset else");
+                // $display("mem write is outside for loop %b",mem_write);
 
             for (i = 0; i < port_count; i=i+1 ) 
                 begin
-                    $display("iteration count %d",i);
-                    $display("mem write is %b",mem_write);
+                    // $display("iteration count %d",i);
+                    // $display("mem write is %b",mem_write);
                     if(mem_write[i] ==1'b1) 
                     begin
-                        $display("write thorugh port %d",i);
+                        // $display("write thorugh port %d",i);
                         test_memory[addr_blocks[i]] = data_in_blocks[i];
                     end 
 
