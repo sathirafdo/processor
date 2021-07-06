@@ -8,141 +8,143 @@ DATA_RADIX = DEC;                         % Enter BIN, DEC, HEX, OCT, or UNS; un
 
 CONTENT
 BEGIN
-0 : 0;      --CLR
-1 : 16;         --MVAC_rnow
-2 : 17;         --MVAC_cATnow
-3 : 18;         --MVAC_cBnow
-4 : 1;      --LOAD
-5 : 0;      --address of cAT
-6 : 14;         --MVAC_cAT
-7 : 12;     --MVAC_R
-8 : 19;     --MOV_Total
-9 : 2;      --MUL
-10 : 12;        --MVAC_R
-11 : 1;         --LOAD
-12 : 5;         --address of [gamma_address]
-13 : 3;         --ADD
-14 : 11;        --MVAC_gammap
-15 : 1;         --LOAD
-16 : 1;         --INNITIAL address of row B
-17 : 13;        --MVAC_row
-18 : 12;        --MVAC_R
-19 : 19;        --MOV_Total
-20 : 2;         --MUL
-21 : 12;        --MVAC_R
-22 : 1;         --LOAD
-23 : 4;         --address of [beta_address]
-24 : 3;         --ADD
-25 : 10;        --MVAC_betap
-26 : 1;         --LOAD
-27 : 2;         --address of cB
-28 : 15;        --MVAC_cB
-29 : 1;         --LOAD
-30 : 3;         --address of [alpa_address]
-31 : 9;         --MVAC_alphap
-32 : 19;        --MOV_Total
-33 : 5;         --INC
-34 : 18;        --MVAC_cBnow
-35 : 0;         --CLR
-36 : 8;         --MVAC_total          --finish initialization
+0 : 0;  --CLR
+1 : 16;     --MVAC_rnow
+2 : 17;     --MVAC_cATnow
+3 : 18;     --MVAC_cBnow
+4 : 1;  --LOAD
+5 : 0;  --address of cAT
+6 : 14;     --MVAC_cAT
+7 : 12; --MVAC_R
+8 : 19; --MOV_Total
+9 : 2 ;     --MUL
+10 : 12;    --MVAC_R
+11 : 1;     --LOAD
+12 : 5;     --address of [gamma_address]
+13 : 3;     --ADD
+14 : 11;    --MVAC_gammap
+15 : 1;     --LOAD
+16 : 1;     --INNITIAL address of row B
+17 : 13;    --MVAC_row
+18 : 12;    --MVAC_R
+19 : 19 ;   --MOV_Total
+20 : 2;     --MUL
+21 : 12;    --MVAC_R
+22 : 1;     --LOAD
+23 : 4;     --address of [beta_address]
+24 : 3;     --ADD
+25 : 10;    --MVAC_betap
+26 : 1;     --LOAD
+27 : 2;     --address of cB
+28 : 15;    --MVAC_cB
+29 : 1;     --LOAD
+30 : 3;     --address of [alpa_address]
+31 : 9;     --MVAC_alphap
+32 : 19 ;   --MOV_Total
+33 : 5;     --INC
+34 : 18;    --MVAC_cBnow
+35 : 0;     --CLR
+36 : 8;     --MVAC_total
 
-37 : 21;        --MOV_betap           --start loop
-38 : 31;        --LOAD REG
-39 : 12;        --MVAC_R
-40 : 20;        --MOV_alphap
-41 : 31;        --LOAD REG
-42 : 2;         --MUL
-43 : 12;        --MVAC_R
-44 : 19;        --    --MOV_total
-45 : 3;         --ADD
-46 : 8;         --MVAC_total
-47 : 27;        --MOV_rnow
-48 : 5;         --INC
-49 : 16;        --MVAC_rnow
-50 : 12;        --MVAC_R
-51 : 24;        --MOV_row //MOV_r
-52 : 4;         --SUB
-53 : 7;         --JUMPZ
+37 : 21;    --MOV_betap --loop start
+38 : 31;    --LOAD REG
+39 : 12;    --MVAC_R
+40 : 20;    --MOV_alphap
+41 : 31;    --LOAD REG
+42 : 2;     --MUL
+43 : 12;    --MVAC_R
+44 : 19;    -- --MOV_total
+45 : 3;     --ADD
+46 : 8;     --MVAC_total
+47 : 27;    --MOV_rnow
+48 : 5;     --INC
+49 : 16;    --MVAC_rnow
+50 : 12;    --MVAC_R
+51 : 24;    --MOV_row //MOV_r
+52 : 4;     --SUB
+53 : 7;     --JUMPZ
 54 : 63;
-55 : 20;        --MOV_alphap
-56 : 5;         --INC
-57 : 9;         --MVAC_alphap
-58 : 21;        --MOV_betap
-59 : 5;         --INC
-60 : 10;        --MVAC_betap
-61 : 6;         --JUMP PC
+55 : 20;    --MOV_alphap
+56 : 5;     --INC
+57 : 9;     --MVAC_alphap
+58 : 21;    --MOV_betap
+59 : 5;     --INC
+60 : 10;    --MVAC_betap
+61 : 6;     --JUMP PC
 62 : 37;
-63 : 19;        --MOV_TOTAL               --start storing 
-64 : 30;        --STORE
-65 : 22;        --MOV_gammap
-66 : 5;         --INC
-67 : 11;        --MVACgammap
-68 : 0;         --CLR
-69 : 8;         --MVAC_total
-70 : 28;        --MOV_cATnow
-71 : 5;         --INC
-72 : 17;        --MVAC_cATnow
-73 : 12;        --MVAC_ R
-74 : 25;        --MOV_cAT
-75 : 4;         --SUB
-76 : 7;         --JUMPZ PC
+
+63 : 19;    --MOV_TOTAL --storing data
+64 : 30;    --STORE
+65 : 22;    --MOV_gammap
+66 : 5;     --INC
+67 : 11;    --MVACgammap
+68 : 0;     --CLR
+69 : 8;     --MVAC_total
+70 : 28;    --MOV_cATnow
+71 : 5;     --INC
+72 : 17;    --MVAC_cATnow
+73 : 12;    --MVAC_ R
+74 : 25;    --MOV_cAT
+75 : 4;     --SUB
+76 : 7;     --JUMPZ PC
 77 : 91;
-78 : 20;        --MOV_alphap
-79 : 5;         --INC
-80 : 9;         --MVAC_alphap
-81 : 24;        --MOV_row
-82 : 12;        --MVAC_R
-83 : 21;        --MOV betap
-84 : 4;         --SUB
-85 : 5;         --INC
-86 : 10;        --MVAC _betap
-87 : 0;         --CLR
-88 : 16;        --MVAC_rnow
-89 : 6;         --JUMP PC
+78 : 20;    --MOV_alphap
+79 : 5;     --INC
+80 : 9;     --MVAC_alphap
+81 : 24;    --MOV_row
+82 : 12;     --MVAC_R
+83 : 21;    --MOV betap
+84 : 4;     --SUB
+85 : 5;     --INC
+86 : 10;    --MVAC _betap
+87 : 0;     --CLR
+88 : 16;    --MVAC_rnow
+89 : 6;     --JUMP PC
 90 : 37;
-91 : 0;         --CLR             --finish one iteration of AT
-92 : 16;        --MVAC_rnow
-93 : 17;        --MVAC_cAtnow
-94 : 29;        --MOV_cBnow   --move this to top to stop extra row calculations
-95 : 12;        --MVAC_R
-96 : 26;        --MOV_cB
-97 : 4;         --SUB
-98 : 7;         --JUMPZ PC
-99 : 131;       --endop
 
-100 :1;         --LOAD
-101 :6;         --( Number of cores - 1)
-102 :5;         --INC
-103 :12;        --MVAC_R
-104 : 29;       --MOV_cBnow
-105 : 3;        --ADD
-106 : 18;       --MVAC_cBnow
-107 : 1;        --LOAD
-108 : 3;        --( A matrix first address)
-109 : 9;        --MVAC_alphap
-110 : 1;        --LOAD
-111 : 6;        --( Number of cores - 1)
-112 : 12;       --MVAC_R;
-113 : 24;       --MOV_row;
-114 : 2;        --MUL;
+91 : 1;      --LOAD
+92 : 6;     --( Number of cores - 1)
+93 : 5;     --INC
+94 : 12;     --MVAC_R
+95 : 29;    --MOV_cBnow
+96 : 3;     --ADD
+97 : 18;    --MVAC_cBnow
+98 : 12;    --MVAC_R
+99 : 26;    --MOV_cB
+100 : 4;    --SUB
+101 : 5;     --INC;
+102 : 7;    --JUMPZ PC
+103 : 131;
 
-115 : 5;        --INC;
-116 : 12;       --MVAC_R;
-117 : 21;       --MOV_betap
-118 : 3;        ---ADD
-119 : 10;       --MVAC_betap
-120 : 1;        --LOAD
-121 : 6;        --( Number of cores - 1)
-122 : 12;       --MVAC_R;
-123 : 25;       ---MOV_cAT;
-124 : 2;        --    --MUL;
+104 : 0;    --CLR
+105 : 16;   --MVAC_rnow
+106 : 17;   --MVAC_cAtnow
+107 : 1;    --LOAD
+108 : 3;    --( A matrix first address)
+109 : 9;    --MVAC_alphap
+110 : 1;     --LOAD
+111 : 6;    --( Number of cores - 1)
+112 : 12;   --MVAC_R;
+113 : 24;   --MOV_row;
+114 : 2 ;   --MUL;
 
-125 : 12;       ---MVAC_R;
-126 : 22;       --MOV_gammap
-127 : 3;            --ADD
-128 : 11;       --MVAC_gammap 
-129 : 6;        --JUMP PC
+115 : 5;    --INC;
+116 : 12;   --MVAC_R;
+117 : 21;   --MOV_betap
+118 : 3;    ---ADD
+119 : 10;   --MVAC_betap
+120 : 1;    --LOAD
+121 : 6;    --( Number of cores - 1)
+122 : 12;   --MVAC_R;
+123 : 25;   ---MOV_cAT;
+124 : 2;    ----MUL;
+
+125 : 12;   ---MVAC_R;
+126 : 22;   --MOV_gammap
+127 : 3;    --ADD
+128 : 11;   --MVAC_gammap 
+129 : 6;     --JUMP PC
 130 : 37;
-131 : 32;       --ENDOP
+131 : 32;   --ENDOP
 
 END; 
