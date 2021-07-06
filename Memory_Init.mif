@@ -16,7 +16,7 @@ BEGIN
 3:200;   % alphap%
 4:900;   % beta p p%
 5:1600;   % gamma p %
-6: 1 ;    %number of cores %
+6: 2 ;    %number of cores -1 %
 
 200: 1;  % start point of transposed matrix of a%        
 201: 6;

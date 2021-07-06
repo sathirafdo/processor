@@ -8,8 +8,9 @@ parameter reg_count         = 16              ;
 parameter reg_file_count    = 11              ;
 parameter IR_width          = 12              ;
 parameter Im_width          = 8               ;
-parameter current_PC_value  = 12'b000000000000;
-parameter core_count        = 2               ;
+parameter current_PC_value  = 12'b000000000000; //IMPORTANT !!!
+parameter core_count        = 3               ; //Remember to change the core count value in
+                                                //dat and mif files when you change the core count
 
 // Processor Inputs
 reg   start                                = 0 ;
