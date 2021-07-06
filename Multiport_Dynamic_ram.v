@@ -36,7 +36,7 @@ module Multiport_Dynamic_ram
             begin
             for (i = 0; port_count -1 < i; i=i+1 ) begin
                  if(mem_write[i] ==1'b1)
-                    test_memory[(address[(i+1)*addr_width-1 -:addr_width] = datain[(i+1)*mem_widthz-1 -:mem_width];
+                    test_memory[address[(i+1)*addr_width-1 -:addr_width]] = datain[(i+1)*mem_width-1 -:mem_width];
                 // test_memory[address[(i+1)*addr_width -1 :i*addr_width]] = datain[(i+1)*mem_width -1 :i*mem_width];
                 //dataout 
                 //TODO !!!!!!!!!!!!!!!!!!!!!!!!!!! uncomment below part

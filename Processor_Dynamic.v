@@ -92,16 +92,16 @@ Ins_Memory	Ins_Memory_inst (
 //TODO very important code multiport dynamic ram 
 
     wire [(addr_width*core_count-1):0] address;
-    wire [mem_width*core_count-1:0] datain;   
-    wire [(mem_width*core_count-1):0] dataout;
+    wire [reg_width*core_count-1:0] datain;   
+    wire [(reg_width*core_count-1):0] dataout;
 
 integer j;
 
 generate        
 for (j = 0; j < core_count ; j=j+1) begin  : conversion     
-  assign address[(j+1)*addr_width -1 :j*addr_width] = AR_to_mem[j];
-  assign datain [(j+1)*mem_width -1 :j*mem_width]  =  DR_out[j];
-  assign DM_datain[j]  = dataout[(j+1)*mem_width -1 :j*mem_width];
+  assign address[(j+1)*addr_width -1 -:addr_width] = AR_to_mem[j];
+  assign datain [(j+1)*reg_width -1 -:reg_width]  =  DR_out[j];
+  assign DM_datain[j]  = dataout[(j+1)*reg_width -1 -:reg_width];
 end
 endgenerate 
 
