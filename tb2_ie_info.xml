@@ -1,0 +1,181 @@
+<?xml version="1.0"?>
+<!--Created by Liquid XML 2008 (www.liquid-technologies.com) for Altera-->
+<ProgramExecution xmlns:xs="http://www.w3.org/2001/XMLSchema-instance">
+	<QuartusExecution>
+		<AddressBits>64</AddressBits>
+		<ApplicationError>
+		<Bits>64</Bits>
+		<CommandLine>quartus</CommandLine>
+		<ErrorMessage>Uncaught C++ Exception</ErrorMessage>
+		<Line>0</Line>
+		<Platform>windows</Platform>
+		<SourceFile>unknown</SourceFile>
+		<StackTrace>
+	0x7ff809b94b88: KERNELBASE + 0x34b88 (RaiseException + 0x68)
+	0x7ffff271e3d8: MSVCR120 + 0x5e3d8 (__BuildCatchObjectHelper + 0x3b0)
+	0x7ff80c231505: ntdll + 0xa1505 (RtlCaptureContext2 + 0x4a5)
+	 0x65c7aaab: QtCore4 + 0x13aaab (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)
+	 0x65ed0118: QtGui4 + 0x30118 (?setActiveWindow@QApplication@@SAXPEAVQWidget@@@Z + 0x278)
+	 0x65f45731: QtGui4 + 0xa5731 (?winFocus@QApplication@@QEAAXPEAVQWidget@@_N@Z + 0x31)
+	 0x65f4650f: QtGui4 + 0xa650f (?winMouseButtonUp@QApplication@@SAXXZ + 0xd1f)
+	0x7ff80bc3e857: USER32 + 0xe857 (CallWindowProcW + 0x3f7)
+	0x7ff80bc3e3db: USER32 + 0xe3db (DispatchMessageW + 0x39b)
+	0x7ff80bc50bc2: USER32 + 0x20bc2 (SendMessageTimeoutW + 0x142)
+	0x7ff80c230c53: ntdll + 0xa0c53 (KiUserCallbackDispatcher + 0x23)
+	0x7ff809e31b23: win32u + 0x1b23 (NtUserShowWindow + 0x13)
+	 0x65f5b456: QtGui4 + 0xbb456 (?show_sys@QWidgetPrivate@@QEAAXXZ + 0x186)
+	 0x65f2610e: QtGui4 + 0x8610e (?show_helper@QWidgetPrivate@@QEAAXXZ + 0x22e)
+	 0x65f24c98: QtGui4 + 0x84c98 (?setVisible@QWidget@@UEAAX_N@Z + 0x308)
+	 0x6635ba5d: QtGui4 + 0x4bba5d (?setVisible@QDialog@@UEAAX_N@Z + 0xcd)
+	 0x6635ac71: QtGui4 + 0x4bac71 (?exec@QDialog@@QEAAHXZ + 0xa1)
+	0x7fffc707b027: GCL_AFCQ + 0x9b027 (?internal_error_display@AFCQ_MSG_DISPLAY@@UEAAXV?$basic_string@DU?$char_traits@D@std@@V?$MEM_STL_ALLOCATOR@D@@@std@@@Z + 0x297)
+	0x7ffff02087e5: CCL_MSG + 0x187e5 (?internal_error@MSG_REPORT@@UEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$MEM_STL_ALLOCATOR@D@@@std@@@Z + 0xf5)
+	0x7ffff02288e7: CCL_MSG + 0x388e7 (?write_internal_error_json_file@MSG_CRASH_REPORT_MANAGER@@QEAAXPEBD0000@Z + 0x1837)
+	0x7ffff0229475: CCL_MSG + 0x39475 (?report_fatal@MSG_INTERNAL_ERROR@@SAXPEBDPEAX@Z + 0x155)
+	0x7ffff01443b0: CCL_ERR + 0x43b0 (?err_report_fatal_exception@@YAXPEBDPEAX@Z + 0x70)
+	0x7ffff0144259: CCL_ERR + 0x4259 (?err_get_module_fullpath@@YAPEBDXZ + 0xe9)
+	0x7ff809c6b886: KERNELBASE + 0x10b886 (UnhandledExceptionFilter + 0x1e6)
+	0x7ff80c25f427: ntdll + 0xcf427 (LdrResolveDelayLoadsFromDll + 0xb37)
+	0x7ff80c230bbf: ntdll + 0xa0bbf (KiUserApcDispatcher + 0x9f)
+	0x7ff80c23217e: ntdll + 0xa217e (__chkstk + 0x11e)
+	0x7ff80c1e1453: ntdll + 0x51453 (RtlRaiseException + 0x433)
+	0x7ff80c1e11a4: ntdll + 0x511a4 (RtlRaiseException + 0x184)
+	0x7ff809b94b88: KERNELBASE + 0x34b88 (RaiseException + 0x68)
+	0x7ffff271e3d8: MSVCR120 + 0x5e3d8 (__BuildCatchObjectHelper + 0x3b0)
+	0x7ff80c231505: ntdll + 0xa1505 (RtlCaptureContext2 + 0x4a5)
+	 0x65c7aaab: QtCore4 + 0x13aaab (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)
+	 0x65ed01f5: QtGui4 + 0x301f5 (?setActiveWindow@QApplication@@SAXPEAVQWidget@@@Z + 0x355)
+	 0x65f46409: QtGui4 + 0xa6409 (?winMouseButtonUp@QApplication@@SAXXZ + 0xc19)
+	0x7ff80bc3e857: USER32 + 0xe857 (CallWindowProcW + 0x3f7)
+	0x7ff80bc3e3db: USER32 + 0xe3db (DispatchMessageW + 0x39b)
+	0x7ff80bc50bc2: USER32 + 0x20bc2 (SendMessageTimeoutW + 0x142)
+	0x7ff80c230c53: ntdll + 0xa0c53 (KiUserCallbackDispatcher + 0x23)
+	0x7ff809e31063: win32u + 0x1063 (NtUserPeekMessage + 0x13)
+	0x7ff80bc3a5c2: USER32 + 0xa5c2 (PeekMessageW + 0x1e2)
+	0x7ff80bc3a522: USER32 + 0xa522 (PeekMessageW + 0x142)
+	 0x65ca8da3: QtCore4 + 0x168da3 (?processEvents@QEventDispatcherWin32@@UEAA_NV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x243)
+	 0x65f3f864: QtGui4 + 0x9f864 (?openPopup@QApplicationPrivate@@QEAAXPEAVQWidget@@@Z + 0x204)
+	 0x65c76a7b: QtCore4 + 0x136a7b (?exec@QEventLoop@@QEAAHV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x22b)
+	 0x6635acc0: QtGui4 + 0x4bacc0 (?exec@QDialog@@QEAAHXZ + 0xf0)
+	0x7fffc707b027: GCL_AFCQ + 0x9b027 (?internal_error_display@AFCQ_MSG_DISPLAY@@UEAAXV?$basic_string@DU?$char_traits@D@std@@V?$MEM_STL_ALLOCATOR@D@@@std@@@Z + 0x297)
+	0x7ffff02087e5: CCL_MSG + 0x187e5 (?internal_error@MSG_REPORT@@UEAAXAEBV?$basic_string@DU?$char_traits@D@std@@V?$MEM_STL_ALLOCATOR@D@@@std@@@Z + 0xf5)
+	0x7ffff02288e7: CCL_MSG + 0x388e7 (?write_internal_error_json_file@MSG_CRASH_REPORT_MANAGER@@QEAAXPEBD0000@Z + 0x1837)
+	0x7ffff0229475: CCL_MSG + 0x39475 (?report_fatal@MSG_INTERNAL_ERROR@@SAXPEBDPEAX@Z + 0x155)
+	0x7ffff01443b0: CCL_ERR + 0x43b0 (?err_report_fatal_exception@@YAXPEBDPEAX@Z + 0x70)
+	0x7ffff0144259: CCL_ERR + 0x4259 (?err_get_module_fullpath@@YAPEBDXZ + 0xe9)
+	0x7ff809c6b886: KERNELBASE + 0x10b886 (UnhandledExceptionFilter + 0x1e6)
+	0x7ff80c25f427: ntdll + 0xcf427 (LdrResolveDelayLoadsFromDll + 0xb37)
+	0x7ff80c230bbf: ntdll + 0xa0bbf (KiUserApcDispatcher + 0x9f)
+	0x7ff80c23217e: ntdll + 0xa217e (__chkstk + 0x11e)
+	0x7ff80c1e1453: ntdll + 0x51453 (RtlRaiseException + 0x433)
+	0x7ff80c1e11a4: ntdll + 0x511a4 (RtlRaiseException + 0x184)
+	0x7ff809b94b88: KERNELBASE + 0x34b88 (RaiseException + 0x68)
+	0x7ffff271e3d8: MSVCR120 + 0x5e3d8 (__BuildCatchObjectHelper + 0x3b0)
+	0x7ff80c231505: ntdll + 0xa1505 (RtlCaptureContext2 + 0x4a5)
+	 0x65c7aaab: QtCore4 + 0x13aaab (?notifyInternal@QCoreApplication@@AEAA_NPEAVQObject@@PEAVQEvent@@@Z + 0x7b)
+	 0x65ed0118: QtGui4 + 0x30118 (?setActiveWindow@QApplication@@SAXPEAVQWidget@@@Z + 0x278)
+	 0x65f45731: QtGui4 + 0xa5731 (?winFocus@QApplication@@QEAAXPEAVQWidget@@_N@Z + 0x31)
+	 0x65f4650f: QtGui4 + 0xa650f (?winMouseButtonUp@QApplication@@SAXXZ + 0xd1f)
+	0x7ff80bc3e857: USER32 + 0xe857 (CallWindowProcW + 0x3f7)
+	0x7ff80bc3e3db: USER32 + 0xe3db (DispatchMessageW + 0x39b)
+	0x7ff80bc50bc2: USER32 + 0x20bc2 (SendMessageTimeoutW + 0x142)
+	0x7ff80c230c53: ntdll + 0xa0c53 (KiUserCallbackDispatcher + 0x23)
+	0x7ff809e31063: win32u + 0x1063 (NtUserPeekMessage + 0x13)
+	0x7ff80bc3a5c2: USER32 + 0xa5c2 (PeekMessageW + 0x1e2)
+	0x7ff80bc3a522: USER32 + 0xa522 (PeekMessageW + 0x142)
+	 0x65ca8da3: QtCore4 + 0x168da3 (?processEvents@QEventDispatcherWin32@@UEAA_NV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x243)
+	 0x65f3f864: QtGui4 + 0x9f864 (?openPopup@QApplicationPrivate@@QEAAXPEAVQWidget@@@Z + 0x204)
+	 0x65c76a7b: QtCore4 + 0x136a7b (?exec@QEventLoop@@QEAAHV?$QFlags@W4ProcessEventsFlag@QEventLoop@@@@@Z + 0x22b)
+	 0x65c79cbf: QtCore4 + 0x139cbf (?exec@QCoreApplication@@SAHXZ + 0xdf)
+	0x7ff698c5197b: quartus + 0x197b
+	0x7ffff01fcad8: CCL_MSG + 0xcad8 (?msg_initialize_out_of_memory_handler@@YAXXZ + 0x378)
+	0x7ffff01fe20c: CCL_MSG + 0xe20c (?msg_set_stack_size@@YAXH@Z + 0x7c)
+	0x7ffff0305aa0: ccl_mem + 0x5aa0 (?mem_gen_get_project_output_directory@@YAPEBDXZ + 0x64)
+	0x7ffff01fc721: CCL_MSG + 0xc721 (?msg_exe_main@@YAHHPEAPEBDP6AHH0@Z@Z + 0xa1)
+	0x7ff698c52507: quartus + 0x2507
+	0x7ff698c51e74: quartus + 0x1e74
+	0x7ff80aa17033: KERNEL32 + 0x17033 (BaseThreadInitThunk + 0x13)
+	0x7ff80c1e2650: ntdll + 0x52650 (RtlUserThreadStart + 0x20)
+		</StackTrace>
+		<Subsystem>unknown</Subsystem>
+	</ApplicationError>
+	<Compilation>
+			<CompileID>0</CompileID>
+			<DeviceFamily/>
+			<IncrementalCompilation/>
+			<TopLevelEntityName/>
+		</Compilation>
+		<DateInvoked>2021/07/03 21:16:45</DateInvoked>
+		<ElapsedTime>44965</ElapsedTime>
+		<IP>192.168.43.20</IP>
+		<IsInternal>false</IsInternal>
+		<IsQt>true</IsQt>
+		<License>
+			<Edition>Full Version</Edition>
+			<LicenseHostID/>
+		</License>
+		<Machine>
+			<CPUCountLogical>8</CPUCountLogical>
+			<CPUCountPhysical>1</CPUCountPhysical>
+			<CPUSpeed>1992</CPUSpeed>
+			<Hostname>DESKTOP-IPBLNCR</Hostname>
+			<NIC>
+				<Address>d8c497228d8a</Address>
+			</NIC>
+			<NIC>
+				<Address>60f6776fe469</Address>
+			</NIC>
+			<NIC>
+				<Address>00ff5222889d</Address>
+			</NIC>
+			<NIC>
+				<Address>00ffc4d13d39</Address>
+			</NIC>
+			<NIC>
+				<Address>60f6776fe465</Address>
+			</NIC>
+			<NIC>
+				<Address>60f6776fe466</Address>
+			</NIC>
+			<NIC>
+				<Address>62f6776fe465</Address>
+			</NIC>
+			<OS>Windows 7</OS>
+			<OSAddressBits>64</OSAddressBits>
+			<OSVersion>6.2</OSVersion>
+			<Platform>windows</Platform>
+			<ScreenResolution>unknown</ScreenResolution>
+			<TotalPhysicalRAM>8069</TotalPhysicalRAM>
+			<TotalVirtualRAM>2560</TotalVirtualRAM>
+		</Machine>
+		<Name>quartus</Name>
+		<PeakMemoryUsed>0</PeakMemoryUsed>
+		<ProjectRevision>
+			<ProjectName/>
+			<Revision/>
+		</ProjectRevision>
+		<QuartusInstallation>
+			<InstallationID>238338860813706.16252957371235</InstallationID>
+			<Version>
+				<Build>186</Build>
+				<BuildSite>SJ</BuildSite>
+				<BuildSuffix/>
+				<Edition>Full Version</Edition>
+				<ServicePack>0</ServicePack>
+				<VersionNumber>14.1</VersionNumber>
+			</Version>
+		</QuartusInstallation>
+		<QuartusUser>
+			<AlteraUserName/>
+			<FAEContactName/>
+			<TalkbackStatus>
+				<DateSet/>
+				<TalkbackOn>true</TalkbackOn>
+			</TalkbackStatus>
+			<UserID>238338860813706.15742489480174</UserID>
+			<UserName>AmilaChinthakaAbeysu</UserName>
+		</QuartusUser>
+	</QuartusExecution>
+	<SchemaVersion>schema_2013-01-18</SchemaVersion>
+</ProgramExecution>
+
