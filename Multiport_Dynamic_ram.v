@@ -1,4 +1,4 @@
-module Multiport_ram
+module Multiport_Dynamic_ram
 #(
     parameter mem_size = 4096,
     parameter mem_width = 12,
