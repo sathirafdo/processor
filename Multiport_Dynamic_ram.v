@@ -21,7 +21,7 @@ module Multiport_Dynamic_ram
 
     initial begin
         $display("Loading rom.");
-        // $readmemh("Memory_Init.dat", test_memory);
+        $readmemh("Memory_Init.dat", test_memory);
     end
     
 wire [addr_width -1:0] addr_blocks [port_count -1 :0];
@@ -52,7 +52,7 @@ always @(posedge clk)
                 $display("inside reset else");
                 $display("mem write is outside for loop %b",mem_write);
 
-            for (i = 0; port_count < i; i=i+1 ) 
+            for (i = 0; i < port_count; i=i+1 ) 
                 begin
                     $display("iteration count %d",i);
                     $display("mem write is %b",mem_write);
