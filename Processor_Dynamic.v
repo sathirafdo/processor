@@ -7,7 +7,8 @@ module Processor_Dynamic
     parameter Im_width=8,
     parameter current_PC_value = 12'b000000000000,
     parameter data_mem_size =4096,
-    parameter  core_count =2
+    parameter  core_count =2,
+    parameter addr_width =12
 )
 (
     input wire start,
@@ -41,6 +42,8 @@ wire [reg_width-1:0] bus_dataout [(core_count-1):0];
 wire [reg_width-1:0] ALU_result [(core_count-1):0];
 wire [reg_width-1:0] Register_file_out[(core_count-1):0];
 wire [reg_width-1:0] AC_out [(core_count-1):0];
+
+
 
 
 
@@ -87,17 +90,42 @@ Ins_Memory	Ins_Memory_inst (
             .q ( InsM_datain ));
 
 //TODO very important code multiport dynamic ram 
-Multiport_ram #(.mem_size(data_mem_size), .mem_width(reg_width), .port_count(core_count) ) u_Multiport_ram (
-    .clk                     ( clk),
-    .reset                   ( reset),
-    .address1                ( AR_to_mem[0] ),
-    .address2                ( AR_to_mem[1]),
-    .datain1                 ( DR_out[0] ),
-    .datain2                 ( DR_out[1] ),
-    .mem_write1              ( mem_write[0]),
-    .mem_write2              ( mem_write[1]),
-    .dataout1                ( DM_datain[0] ),
-    .dataout2                ( DM_datain[1] )
+
+    wire [(addr_width*core_count-1):0] address;
+    wire [mem_width*core_count-1:0] datain;   
+    wire [(mem_width*core_count-1):0] dataout;
+
+integer j;
+
+generate        
+for (j = 0; j < core_count ; j=j+1) begin  : conversion     
+  assign address[(j+1)*addr_width -1 :j*addr_width] = AR_to_mem[j];
+  assign datain [(j+1)*mem_width -1 :j*mem_width]  =  DR_out[j];
+  assign DM_datain[j]  = dataout[(j+1)*mem_width -1 :j*mem_width];
+end
+endgenerate 
+
+Multiport_Dynamic_ram #(.mem_size(data_mem_size),.mem_width(reg_width),.addr_width(addr_width),.port_count(core_count)) u_Dynamic_ram(
+    .clk(clk),
+    .reset(reset),
+    .address(address),
+    .datain(datain),
+    .mem_write(mem_write),     
+    .dataout(dataout)
 );
+
+
+// Multiport_ram #(.mem_size(data_mem_size), .mem_width(reg_width), .port_count(core_count) ) u_Multiport_ram (
+//     .clk                     ( clk),
+//     .reset                   ( reset),
+//     .address1                ( AR_to_mem[0] ),
+//     .address2                ( AR_to_mem[1]),
+//     .datain1                 ( DR_out[0] ),
+//     .datain2                 ( DR_out[1] ),
+//     .mem_write1              ( mem_write[0]),
+//     .mem_write2              ( mem_write[1]),
+//     .dataout1                ( DM_datain[0] ),
+//     .dataout2                ( DM_datain[1] )
+// );
 
 endmodule //Processor_dynamic
