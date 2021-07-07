@@ -33,7 +33,6 @@ generate
 for (j = 0; j < port_count ; j=j+1) begin  : conversion     
   assign addr_blocks[j] = address [(j+1)*addr_width-1 -:addr_width];
   assign data_in_blocks[j] = datain [(j+1)*mem_width-1 -:mem_width];
-//   assign data_out_blocks[j]= dataout[(j+1)*mem_width-1 -:mem_width];
 end
 endgenerate 
 
@@ -44,21 +43,14 @@ always @(posedge clk)
         if (reset== 1'b1)
         begin
             dataout = {(mem_width*port_count-1){1'b0}};
-            // dataout2 = 12'b000000000000;
-            // $display("inside reset");
         end
         else
             begin
-                // $display("inside reset else");
-                // $display("mem write is outside for loop %b",mem_write);
 
             for (i = 0; i < port_count; i=i+1 ) 
                 begin
-                    // $display("iteration count %d",i);
-                    // $display("mem write is %b",mem_write);
                     if(mem_write[i] ==1'b1) 
                     begin
-                        // $display("write thorugh port %d",i);
                         test_memory[addr_blocks[i]] = data_in_blocks[i];
                     end 
 
