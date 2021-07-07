@@ -114,18 +114,4 @@ Multiport_Dynamic_ram #(.mem_size(data_mem_size),.mem_width(reg_width),.addr_wid
     .dataout(dataout)
 );
 
-
-// Multiport_ram #(.mem_size(data_mem_size), .mem_width(reg_width), .port_count(core_count) ) u_Multiport_ram (
-//     .clk                     ( clk),
-//     .reset                   ( reset),
-//     .address1                ( AR_to_mem[0] ),
-//     .address2                ( AR_to_mem[1]),
-//     .datain1                 ( DR_out[0] ),
-//     .datain2                 ( DR_out[1] ),
-//     .mem_write1              ( mem_write[0]),
-//     .mem_write2              ( mem_write[1]),
-//     .dataout1                ( DM_datain[0] ),
-//     .dataout2                ( DM_datain[1] )
-// );
-
 endmodule //Processor_dynamic

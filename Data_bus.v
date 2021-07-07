@@ -10,25 +10,6 @@ module Data_bus
     output reg  [(reg_width-1):0] dataout
 );
 
-//reg [(reg_width-1):0] out;
-/*localparam AC = 16'b0000000000000001,
-           PC =  16'b0000000000000010,
-           AR = 16'b0000000000000100,
-           IR = 16'b0000000000001000,
-           R = 16'b0000000000010000,
-           row =  16'b0000000000100000,
-           cAT= 16'b0000000001000000,
-           cB = 16'b0000000010000000,
-           rnow=16'b0000000100000000,
-           cATnow= 16'b0000001000000000,
-           cBnow = 16'b0000010000000000,
-           alphap = 16'b0000100000000000,
-           betap = 16'b0001000000000000,
-           gammap = 16'b0010000000000000,
-           Total = 16'b0100000000000000,
-           DR = 16'b1000000000000000;*/          
-
-
 //registers ususally change with the clock.try to make it combinational using assign statements and
 //relevant if statements using ? : statements if there are issues with this 
 
