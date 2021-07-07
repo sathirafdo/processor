@@ -150,7 +150,7 @@ always @(posedge clk) begin
     end
 end
 
-always @(*) begin // TODO : check sensitivity list should we add *opcode ?*
+always @(*) begin 
     
     //next_st = current_st;
 

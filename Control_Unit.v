@@ -317,7 +317,7 @@ always @(*) begin //
             write_en = AR;
             read_en = DR;            
             mem_read = Null0; 
-            //TODO removed DataM from here.check if got the corrct results(if results are correct change the other places with 2 consecutive Datam ASSIGNMWNTS)
+            //removed DataM from here.check if got the corrct results(if results are correct change the other places with 2 consecutive Datam ASSIGNMWNTS)
             //memory does not need an enabling signal to output a value it just needs an address
             //mem read enabling signal controls data input from memmry path to DR
             //as the address is provided in this clock cycle.the required data is not avaibale yet(as it akes 2 clock cycles)(some other unnecessary data is avaible)
