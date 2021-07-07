@@ -78,6 +78,7 @@ generate
 end 
 endgenerate
 
+//TODO remove memory to outside
 //Removed memoryQ
 wire [reg_width-1:0] AR_to_mem_final;
 assign AR_to_mem_final = AR_to_mem[0];
