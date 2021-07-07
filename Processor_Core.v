@@ -40,7 +40,7 @@ wire [reg_width-1:0] PC_to_AR, bus_dataout,ALU_result,Register_file_out,AC_out;
 wire [reg_width-1:0] dataout, AC_to_ALU;
 
 
-Register_File #(.reg_count(reg_file_count), .reg_width(reg_width), .betap_reset(betap_reset), .gammap_reset(gammap_reset), .core_number(core_number)) RF_unit 
+Register_File #(.reg_count(reg_file_count), .reg_width(reg_width), .core_number(core_number)) RF_unit 
             (.read_en(read_en[14:4]),
             .write_en(write_en[14:4]),
             .clk(clk),

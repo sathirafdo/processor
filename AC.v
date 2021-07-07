@@ -27,8 +27,9 @@ begin
 //moving z flag to ac
 //added newly to get proper z value
         if ((AC_in == 12'b000000000000) || (AC_in[reg_width-1] == 1'b1))
+            Zflag = 1'b1;
         else
-           Zflag = 1'b0;
+            Zflag = 1'b0;
 
     end
     
