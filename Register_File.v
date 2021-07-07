@@ -1,8 +1,6 @@
 module Register_File
 #(  parameter reg_count = 11, // Register files + R register
     parameter reg_width = 12,
-    parameter betap_reset =  12'd900,
-    parameter gammap_reset = 12'd1600,
     parameter core_number=0
 )
 (
@@ -50,14 +48,12 @@ begin
     if (reset) 
 		begin
         
-        for (i = 0 ; i< reg_count-3 ;i=i+1 ) 
+        for (i = 0 ; i< reg_count-1 ;i=i+1 ) 
         begin
             reg_set[i] = 12'b00000000000 ;           
         end
-            reg_set[betap] = betap_reset;
-            reg_set[gammap] = gammap_reset ;
             reg_set[Total] = core_number ;
-            //TODO int he instrction order remember to reset total before calculations start
+            //NOTE : in the instrction order remember to reset total before calculations start
         //KLT 1st law reg_set[betap] = 12'b00100011010 ;
 		  end
     else         
