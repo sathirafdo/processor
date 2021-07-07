@@ -29,23 +29,7 @@ wire [(core_count-1):0] mem_write ;
 wire [reg_width-1:0] im_data_sig;
 wire im_wren_sig;
 
-//for demonstration
-wire [reg_count - 1:0] read_en [(core_count-1):0];
-wire [reg_count - 1:0] write_en [(core_count-1):0];
-wire [(core_count-1):0] Zflag;
-wire [(core_count-1):0] PC_Inc;
-wire [IR_width - 1:0] opcode [(core_count-1):0];
-wire [2:0] alu_op [(core_count-1):0];
-wire [1:0] mem_read [(core_count-1):0];
-wire [reg_width-1:0] PC_to_AR [(core_count-1):0];
-wire [reg_width-1:0] bus_dataout [(core_count-1):0];
-wire [reg_width-1:0] ALU_result [(core_count-1):0];
-wire [reg_width-1:0] Register_file_out[(core_count-1):0];
-wire [reg_width-1:0] AC_out [(core_count-1):0];
-
-
-
-
+//for demonstration wires removed 
 
 genvar i;
 generate
@@ -60,25 +44,11 @@ generate
             .InsM_datain(InsM_datain),
             .DM_datain(DM_datain[i]),
             .DR_out(DR_out[i]),
-            .endop_signal(endop_signal[i]),
-
-            .read_en(read_en[i]), 
-            .write_en(write_en[i]),
-            .Zflag(Zflag[i]),
-            .PC_Inc(PC_Inc[i]),
-            .opcode(opcode[i]),
-            .alu_op(alu_op[i]),
-            .mem_read(mem_read[i]),
-            .PC_to_AR(PC_to_AR[i]),
-            .bus_dataout(bus_dataout[i]),
-            .ALU_result(ALU_result[i]),
-            .AC_out(AC_out[i]),
-            .Register_file_out(Register_file_out[i]));
+            .endop_signal(endop_signal[i]));
 
 end 
 endgenerate
 
-//TODO remove memory to outside
 //Removed memoryQ
 wire [reg_width-1:0] AR_to_mem_final;
 assign AR_to_mem_final = AR_to_mem[0];
@@ -92,9 +62,9 @@ Ins_Memory	Ins_Memory_inst (
 
 //TODO very important code multiport dynamic ram 
 
-    wire [(addr_width*core_count-1):0] address;
-    wire [reg_width*core_count-1:0] datain;   
-    wire [(reg_width*core_count-1):0] dataout;
+wire [(addr_width*core_count-1):0] address;
+wire [reg_width*core_count-1:0] datain;   
+wire [(reg_width*core_count-1):0] dataout;
 
 genvar j;
 
@@ -114,19 +84,5 @@ Multiport_Dynamic_ram #(.mem_size(data_mem_size),.mem_width(reg_width),.addr_wid
     .mem_write(mem_write),     
     .dataout(dataout)
 );
-
-
-// Multiport_ram #(.mem_size(data_mem_size), .mem_width(reg_width), .port_count(core_count) ) u_Multiport_ram (
-//     .clk                     ( clk),
-//     .reset                   ( reset),
-//     .address1                ( AR_to_mem[0] ),
-//     .address2                ( AR_to_mem[1]),
-//     .datain1                 ( DR_out[0] ),
-//     .datain2                 ( DR_out[1] ),
-//     .mem_write1              ( mem_write[0]),
-//     .mem_write2              ( mem_write[1]),
-//     .dataout1                ( DM_datain[0] ),
-//     .dataout2                ( DM_datain[1] )
-// );
 
 endmodule //Processor_dynamic

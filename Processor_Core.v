@@ -9,8 +9,6 @@ module Processor_Core
     parameter IR_width=12,
     parameter Im_width=8,
     parameter current_PC_value = 12'b000000000000,
-    parameter betap_reset =  12'd900,
-    parameter gammap_reset = 12'd1600,
     parameter core_number = 0
 )
 
@@ -18,14 +16,6 @@ module Processor_Core
     input wire start,
     input wire clk,reset,
 
-    //For demonstration purposes
-    output wire Zflag,PC_Inc,
-    output wire [IR_width - 1:0] opcode,
-    output wire [2:0] alu_op,
-    output wire [reg_count - 1:0] read_en, write_en, 
-    output wire [1:0] mem_read, //this signal goes to dr so no need to output in actual system
-    output wire [reg_width-1:0] PC_to_AR, bus_dataout,ALU_result,Register_file_out,AC_out,
-    
     //actual necessarry wires
     output wire [reg_width-1:0] AR_to_mem,DR_out,
     output wire mem_write,   
@@ -38,16 +28,17 @@ localparam trash= 12'bz;
 localparam ALU_op_width = 3;
 
 
+//removed from outpur and brought inside
+wire Zflag,PC_Inc;
+wire [IR_width - 1:0] opcode;
+wire [2:0] alu_op;
+wire [reg_count - 1:0] read_en, write_en;
+wire [1:0] mem_read; //this signal goes to dr so no need to output
+wire [reg_width-1:0] PC_to_AR, bus_dataout,ALU_result,Register_file_out,AC_out;
 
 
-wire [reg_width-1:0] dataout,
-AC_to_ALU;
+wire [reg_width-1:0] dataout, AC_to_ALU;
 
-wire [reg_width-1:0] im_data_sig;
-wire im_wren_sig;
-wire [10:0] re,we;
-assign re = read_en[14:4]; 
-assign we = write_en[14:4];
 
 Register_File #(.reg_count(reg_file_count), .reg_width(reg_width), .betap_reset(betap_reset), .gammap_reset(gammap_reset), .core_number(core_number)) RF_unit 
             (.read_en(read_en[14:4]),
