@@ -863,14 +863,12 @@ always @(*) begin //
 
         default :
             begin
-            $display("Sadda thiya ganna epa Defult eke inne.KP ta kiyanna epa meeka gana.");
             write_en = None;
             read_en = None ;            
             mem_read = Null0; 
             mem_write = 1'b0;
             alu_op = IDLE;
             PC_Inc = 1'b0;
-            //wrong states end 
             next_st = Idle;
             end        
     endcase 
@@ -879,7 +877,3 @@ always @(*) begin //
 end 
     
 endmodule
-
-//CHANGES
-//curentlty memory read is provided in 2 cycles. change this to provide only in correct cycle
-//check sensitivity list( we provide *) should we add *opcode ?*
