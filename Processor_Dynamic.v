@@ -60,7 +60,6 @@ Ins_Memory	Ins_Memory_inst (
             .wren ( im_wren_sig ),//not necessary grounded set alwasy zero to disable writing always
             .q ( InsM_datain ));
 
-//TODO very important code multiport dynamic ram 
 
 wire [(addr_width*core_count-1):0] address;
 wire [reg_width*core_count-1:0] datain;   

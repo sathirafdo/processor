@@ -1,5 +1,3 @@
-//Module Processor_Core
-//TODO remove display wires
 module Processor_Core
 #(
 

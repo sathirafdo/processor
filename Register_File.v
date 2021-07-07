@@ -12,10 +12,6 @@ module Register_File
 
 );
 
-
-reg [reg_width:0] trash; // trash value to assign at default case
-
-
 reg [(reg_width-1):0] reg_set [(reg_count-1):0];
 
 localparam  R = 0,
@@ -54,7 +50,6 @@ begin
         end
             reg_set[Total] = core_number ;
             //NOTE : in the instrction order remember to reset total before calculations start
-        //KLT 1st law reg_set[betap] = 12'b00100011010 ;
 		  end
     else         
     begin
@@ -75,16 +70,12 @@ begin
         else if (write_en[alphap] == 1'b1)
             reg_set[alphap]  = datain;
         else if (write_en[betap] == 1'b1)
-        begin
-            $display("beta p ekataq aava. seethala vathura veeduruvak bomu",write_en,read_en);
             reg_set[betap]  = datain;
-        end
         else if (write_en[gammap] == 1'b1)
             reg_set[gammap]  = datain;
         else if (write_en[Total] == 1'b1)
             reg_set[Total]  = datain;
-               
-		// KLT constant 12'b11100011011
+
           
         
     end
