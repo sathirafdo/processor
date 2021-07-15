@@ -7,7 +7,7 @@ module Control_Unit
     input wire clk, start, reset, Zflag, // if reset = 1(active high)
     input wire [IR_width - 1:0] opcode, //opcode to IR
 
-    output reg [2:0] alu_op,
+    output reg [3:0] alu_op,
     output reg [Reg_count - 1:0] read_en, write_en,
     output reg mem_write, PC_Inc,
     output reg [1:0] mem_read,
@@ -77,17 +77,19 @@ localparam [11:0]
            MOV_cBnow = 12'd29,
            STORE = 12'd30,
            LOAD_REG = 12'd31,
-           ENDOP = 12'd32;
+           ENDOP = 12'd32,
+           XOR = 12'd33;
 
 //ALU Operations
-localparam [2:0]
-           IDLE = 3'b000,
-           Pass = 3'b001,
-           Add = 3'b010,
-           Sub = 3'b011,
-           Mul = 3'b100,
-           Plus1 = 3'b101,
-           Zero = 3'b110;
+localparam [3:0]
+           IDLE = 4'b0000,
+           Pass = 4'b0001,
+           Add = 4'b0010,
+           Sub = 4'b0011,
+           Mul = 4'b0100,
+           Plus1 = 4'b0101,
+           Zero = 4'b0110,
+		   XOR_ALU_Op = 4'b0111;
 
 //States
 localparam [5:0]
@@ -143,7 +145,8 @@ localparam [5:0]
            JUMPZN2 = 6'd49,
            LOAD_REG4= 6'd50,
            JUMP3 = 6'd51,
-           STORE3 = 6'd52 ;    
+           STORE3 = 6'd52,
+           XOR1 = 6'd53; 
 
 
 reg [5:0] current_st, next_st;
@@ -166,7 +169,7 @@ always @(*) begin //
     read_en = 16'bx;
     mem_read = 2'bx;  
     mem_write = 1'bx;         
-    alu_op = 3'bx;
+    alu_op = 4'bx;
     PC_Inc = 1'bx;  
     
 
@@ -182,7 +185,7 @@ always @(*) begin //
                 read_en = 16'bx;
                 mem_read = 2'bx;  
                 mem_write = 1'bx;         
-                alu_op = 3'bx;
+                alu_op = 4'bx;
                 PC_Inc = 1'bx;
                 endop_signal =1'b0;  
 
@@ -197,7 +200,7 @@ always @(*) begin //
                 read_en = 16'bx;
                 mem_read = 2'bx;  
                 mem_write = 1'bx;         
-                alu_op = 3'bx;
+                alu_op = 4'bx;
                 PC_Inc = 1'bx;
                 next_st = Idle;	 
                 end 
@@ -254,6 +257,7 @@ always @(*) begin //
                 SUB : next_st = SUB1;
                 INC : next_st = INC1;
                 JUMP : next_st = JUMP1;
+                XOR : next_st = XOR1;
                 JUMPZ :begin
                 if (Zflag == 1'b1)  
                     next_st = JUMPZY1; 
@@ -859,6 +863,17 @@ always @(*) begin //
             next_st = Idle;
             endop_signal =1'b1; 
             end
+
+        XOR1 :begin    
+            $display("XOR1");    
+            write_en = AC;
+            read_en = R;            
+            mem_read = Null0; 
+            mem_write = 1'b0;
+            alu_op = XOR_ALU_Op;
+            PC_Inc = 1'b0;
+            next_st = FETCH1;
+        end
         
 
         default :

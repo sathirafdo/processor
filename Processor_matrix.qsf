@@ -109,9 +109,12 @@ set_global_assignment -name VERILOG_FILE AR.v
 set_global_assignment -name VERILOG_FILE ALU.v
 set_global_assignment -name QIP_FILE MemoryQ.qip
 set_global_assignment -name QIP_FILE Ins_Memory.qip
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name EDA_TEST_BENCH_NAME Final_System_tb -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Final_System_tb
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Final_System_tb -section_id Final_System_tb
+set_global_assignment -name EDA_TEST_BENCH_NAME ALU_TB_XOR -section_id eda_simulation
+set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id ALU_TB_XOR
+set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME ALU_TB_XOR -section_id ALU_TB_XOR
 set_global_assignment -name EDA_TEST_BENCH_FILE ALU_tb.v -section_id ALU_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE R_tb.v -section_id R_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE DR_tb.v -section_id DR_tb
@@ -127,8 +130,9 @@ set_global_assignment -name EDA_TEST_BENCH_FILE Processor_tb.v -section_id Proce
 set_global_assignment -name EDA_TEST_BENCH_FILE Processor_Multiport_tb.v -section_id Processor_Multiport_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Processor_Dynamic_tb.v -section_id Processor_Dynamic_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Multiport_Dynamic_ram_tb.v -section_id Multiport_Dynamic_ram_tb
-set_global_assignment -name EDA_TEST_BENCH_NAME Final_System_tb -section_id eda_simulation
-set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Final_System_tb
-set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Final_System_tb -section_id Final_System_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Final_Sytem_tb.v -section_id Final_System_tb
+set_global_assignment -name EDA_TEST_BENCH_FILE ALU_TB_XOR.v -section_id ALU_TB_XOR
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

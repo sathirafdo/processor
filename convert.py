@@ -1,6 +1,6 @@
 print("hello . Welcome to ape seeni boola hotale")
-inputFileName =input("Enter mif file name :")
-outputFileName =input("Enter dat file name :")
+inputFileName =input("Enter mif file name :") or "Memory_Init.mif"
+outputFileName =input("Enter dat file name :") or "Memory_Init.dat"
 
 datContent = [i.strip().split(";") for i in open(inputFileName).readlines()]
 

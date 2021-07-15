@@ -2,7 +2,7 @@ module Processor_Core
 #(
 
     parameter reg_width =12,
-    parameter  reg_count= 16,
+    parameter reg_count= 16,
     parameter reg_file_count =11,
     parameter IR_width=12,
     parameter Im_width=8,
@@ -23,13 +23,13 @@ module Processor_Core
 );
 
 localparam trash= 12'bz;
-localparam ALU_op_width = 3;
+localparam ALU_op_width = 4;
 
 
 //removed from outpur and brought inside
 wire Zflag,PC_Inc;
 wire [IR_width - 1:0] opcode;
-wire [2:0] alu_op;
+wire [3:0] alu_op;
 wire [reg_count - 1:0] read_en, write_en;
 wire [1:0] mem_read; //this signal goes to dr so no need to output
 wire [reg_width-1:0] PC_to_AR, bus_dataout,ALU_result,Register_file_out,AC_out;

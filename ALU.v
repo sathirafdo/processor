@@ -2,19 +2,20 @@ module ALU
 #( parameter reg_width=12 )
 (
 	input clk,reset,
-	input [2:0] ALU_Operation, // comes from the control unit
+	input [3:0] ALU_Operation, // comes from the control unit
 	input [reg_width-1:0] AC,Bus, // data from AC and Bus
 	output [reg_width-1:0] result
 	//moved z flag to ac
 );
 
-localparam IDLE = 3'b000,
-           Pass = 3'b001,
-           Add = 3'b010,
-           Sub = 3'b011,
-           Mul = 3'b100,
-           Plus1 = 3'b101,
-           Zero = 3'b110;
+localparam IDLE = 4'b0000,
+           Pass = 4'b0001,
+           Add = 4'b0010,
+           Sub = 4'b0011,
+           Mul = 4'b0100,
+           Plus1 = 4'b0101,
+           Zero = 4'b0110,
+		   XOR = 4'b0111;
 
 //combinational part
 
@@ -25,6 +26,7 @@ assign result =(ALU_Operation == IDLE) ? 12'bx :
 					(ALU_Operation == Mul) ? AC*Bus :
 					(ALU_Operation == Plus1) ? AC+12'b000000000001 :
 					(ALU_Operation == Zero) ? 12'b000000000000 :
+					(ALU_Operation == XOR) ? AC ^ Bus:
            			12'bx;
 
 	endmodule
