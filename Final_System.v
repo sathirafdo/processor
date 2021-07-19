@@ -40,7 +40,7 @@ wire [reg_width-1:0] im_data_sig;
 wire im_wren_sig;
 
 wire [reg_width-1:0] AR_to_mem_final;
-assign AR_to_mem_final = address[addr_width-1 :0];
+assign AR_to_mem_final = address[11 :0];//TODO parameterize gain
 
 Ins_Memory	Ins_Memory_inst (
             .address (AR_to_mem_final[(Im_width-1):0] ), //same instruction is accessed by all cores at a given time
